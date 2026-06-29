@@ -1,0 +1,3866 @@
+.AssistivePageSize {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  font-size: 12px;
+  background-color: white;
+}
+
+.AssistivePlugin div, .AssistivePlugin span {
+  user-select: none;
+}
+.AssistivePlugin li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.AssistiveFakeLabel {
+  display: inline;
+  height: 0px;
+  width: 0px;
+  max-height: 0px;
+  max-width: 0px;
+  font-size: 0px;
+}
+
+.AssistiveOverlay {
+  display: none;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: rgba(255, 255, 255, 0);
+  z-index: 99999;
+}
+.AssistiveBarOpen .AssistiveOverlay {
+  display: block;
+}
+html[astv-win] .AssistiveOverlay {
+  display: block;
+}
+html[astv-win] .AssistiveOverlay {
+  display: block;
+}
+html[data-astv-guide=guide] .AssistiveOverlay {
+  display: none;
+}
+html[data-astv-guide=ruler] .AssistiveOverlay {
+  display: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.AssistiveFloating {
+  font-size: 18px;
+  position: fixed;
+  z-index: 100000;
+}
+.AssistiveFloating * {
+  font-size: 18px;
+  line-height: 18px;
+  text-size-adjust: 100%;
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: 0;
+  box-sizing: border-box;
+  font-weight: normal;
+  font-style: normal;
+  font-family: Segoe UI, SF Pro, Helvetica, Verdana, Tahoma, sans-serif, Arial;
+  vertical-align: baseline;
+}
+.AssistiveFloating * :focus {
+  outline: 0;
+}
+.AssistiveFloating .AstvBtnIcon {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  background-repeat: no-repeat !important;
+  background-size: 100% 100% !important;
+  background-position: center !important;
+}
+.AssistiveFloating .AssistiveBtn {
+  display: table-cell;
+  vertical-align: middle;
+  overflow: hidden;
+  border-radius: 100px;
+  cursor: pointer;
+  height: 50px;
+  min-width: 50px;
+  padding: 10px;
+  white-space: nowrap;
+}
+.AssistiveFloating .AssistiveBtn .AssistiveBL {
+  font-family: Segoe UI, SF Pro, Helvetica, Verdana, Tahoma, sans-serif, Arial !important;
+  color: white !important;
+  padding: 0 !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+  position: relative !important;
+  display: none !important;
+  font-size: 18px !important;
+  white-space: nowrap !important;
+  top: 1px !important;
+  overflow: initial !important;
+  background: inherit !important;
+  width: auto !important;
+  height: auto !important;
+  font-weight: normal !important;
+  line-height: normal !important;
+  clip: auto !important;
+  margin: auto !important;
+  cursor: pointer !important;
+  text-transform: none !important;
+}
+.AssistiveIsTouch .AssistiveFloating .AssistiveBtn .AssistiveBL {
+  display: none !important;
+}
+.AssistiveFloating .AssistiveMobileLabel {
+  display: none !important;
+  position: absolute;
+  top: 13px;
+  font-size: 18px !important;
+  background-color: rgba(68, 68, 68, 0.9333333333);
+  border-radius: 56px;
+  padding: 6px 12px;
+  color: white;
+  white-space: nowrap;
+}
+.ShowTooltip.AssistiveIsTouch .AssistiveFloating .AssistiveMobileLabel {
+  display: block !important;
+}
+.AstvInvisible .AssistiveFloating .AssistiveFloatingBar .AssistiveMainBtn {
+  display: none;
+}
+
+.AssistiveFloatingBar {
+  padding: 0px;
+}
+.AstvHiddenChild .AssistiveFloatingBar {
+  display: none !important;
+}
+.AssistiveFloatingBar .AssistiveFloatingItemsBox {
+  min-width: auto !important;
+  display: none;
+}
+.AssistiveBarOpen .AssistiveFloatingBar .AssistiveFloatingItemsBox {
+  display: block;
+  position: absolute;
+  outline: none !important;
+}
+.AssistiveFloatingBar .AssistiveFloatingItems {
+  z-index: 100;
+}
+.AssistiveFloatingBar .AssistiveFloatingItem {
+  display: block;
+  padding: 1px !important;
+  position: relative;
+}
+.DisableSpeech .AssistiveFloatingBar .AssistiveFloatingItem.AssistiveSpeechItem, .DisableDisplay .AssistiveFloatingBar .AssistiveFloatingItem.AssistiveDisplayItem, .DisableSigns .AssistiveFloatingBar .AssistiveFloatingItem.AssistiveSignsItem {
+  display: none;
+}
+.AssistiveFloatingBar .AssistiveFloatingItem:hover .AssistiveBL, .AssistiveFloatingBar .AssistiveFloatingItem .AssistiveBtn:focus .AssistiveBL {
+  display: inline-block !important;
+}
+.AssistiveIsTouch .AssistiveFloatingBar .AssistiveFloatingItem:hover .AssistiveBL, .AssistiveIsTouch .AssistiveFloatingBar .AssistiveFloatingItem .AssistiveBtn:focus .AssistiveBL {
+  display: none !important;
+}
+.AssistiveFloatingBar .AssistiveFloatingItem:hover .AssistiveBtn, .AssistiveFloatingBar .AssistiveFloatingItem .AssistiveBtn:focus .AssistiveBtn {
+  box-shadow: 0px 5.6px 11.2px rgba(0, 0, 0, 0.4666666667);
+}
+.AssistiveFloatingBar .AssistiveBtn:focus {
+  outline: 5px solid rgba(0, 0, 0, 0.4666666667);
+  outline-offset: 3px;
+}
+.AssistiveIsTouch .AssistiveFloatingBar .AssistiveBtn:focus, .AssistiveMouse .AssistiveFloatingBar .AssistiveBtn:focus {
+  outline: none !important;
+  outline-offset: 0px !important;
+}
+.AssistiveFloatingBar .AssistiveBtn .AstvBtnIcon {
+  background-color: inherit !important;
+}
+.AssistiveFloatingBar .AssistiveBtn.AssistiveMainBtn {
+  box-shadow: 0px 5.6px 11.2px rgba(0, 0, 0, 0.4666666667);
+  cursor: default;
+  z-index: 200;
+  padding: 0;
+  text-decoration: none !important;
+}
+.AssistiveFloatingBar .AssistiveBtn.AssistiveMainBtn:hover {
+  text-decoration: none !important;
+  color: white !important;
+}
+.AssistiveFloatingBar .AssistiveBtn.AssistiveMainBtn .AssistiveIcon {
+  color: white !important;
+}
+.AssistiveFloatingBar .AssistiveBtn.AssistiveMainBtn .AssistiveMainToast {
+  display: block !important;
+  position: absolute;
+  font-size: 18px !important;
+  background-color: rgba(68, 68, 68, 0.9333333333);
+  border-radius: 56px;
+  padding: 6px 12px;
+  color: white;
+  white-space: nowrap;
+}
+.AssistiveNoMainToast .AssistiveFloatingBar .AssistiveBtn.AssistiveMainBtn .AssistiveMainToast {
+  display: none !important;
+}
+.AssistiveBtnShape_square .AssistiveFloatingBar .AssistiveBtn {
+  border-radius: 0;
+}
+.AssistiveBtnSize_small.AssistiveBtnShape_rounded .AssistiveFloatingBar .AssistiveBtn {
+  border-radius: 6px;
+}
+.AssistiveBtnSize_medium.AssistiveBtnShape_rounded .AssistiveFloatingBar .AssistiveBtn {
+  border-radius: 8px;
+}
+.AssistiveBtnSize_large.AssistiveBtnShape_rounded .AssistiveFloatingBar .AssistiveBtn {
+  border-radius: 10px;
+}
+.AssistiveFloatingBar .AssistiveBtn.AssistiveSignsBtn .AstvBtnIcon {
+  background-image: url("IconSigns.5.svg") !important;
+}
+.AssistiveFloatingBar .AssistiveBtn.AssistiveDisplayBtn .AstvBtnIcon {
+  background-image: url("IconDisplay.8.svg") !important;
+}
+.AssistiveFloatingBar .AssistiveBtn.AssistiveSpeechBtn .AstvBtnIcon {
+  background-image: url("IconSpeech.7.svg") !important;
+}
+.AssistiveBarOpen .AssistiveFloatingBar .AssistiveMainBtn {
+  box-shadow: 0px 11.2px 22.4px rgba(0, 0, 0, 0.4666666667);
+}
+
+.AssistiveFloatingBar ul li > .AssistiveFloatingItemsBox {
+  visibility: hidden;
+}
+
+.AssistiveFloatingBar ul li:hover > .AssistiveFloatingItemsBox {
+  visibility: visible;
+}
+
+.AssistiveFake {
+  background-color: rgba(255, 255, 255, 0);
+  background-color: red;
+  width: 0.0001;
+  height: 0.0001;
+  opacity: 0.00001;
+  position: fixed;
+}
+.AssistiveFake a {
+  text-decoration: none !important;
+}
+.AssistiveFake a:hover, .AssistiveFake a:active, .AssistiveFake a:focus, .AssistiveFake a:any-link {
+  text-decoration: none !important;
+}
+
+.AstvToggleGroup {
+  border-radius: 8px;
+  border: 1px solid #f2f3f7;
+  background-color: #fff;
+  font-size: 12px;
+  text-align: left !important;
+  line-height: 14px !important;
+  font-family: Segoe UI, SF Pro, Helvetica, Verdana, Tahoma, sans-serif, Arial !important;
+  letter-spacing: normal !important;
+  text-align: left !important;
+  word-spacing: normal !important;
+}
+.AstvToggleGroup:focus-visible {
+  outline: 4px solid var(--AstvFocusColor) !important;
+  outline-offset: 2px !important;
+}
+.AstvToggleGroup .AstvToggleBtnF {
+  padding: 8px 0;
+  display: inline-block;
+  background-color: #f2f3f7;
+  border-radius: 8px;
+  width: 53px;
+  text-align: center;
+  font-weight: 600;
+  cursor: pointer;
+  color: #000;
+  line-height: 22px;
+}
+.AstvToggleGroup .AstvToggleBtnF:hover {
+  color: #000;
+}
+.AstvToggleGroup .AstvToggleBtnT {
+  padding: 8px 0;
+  display: inline-block;
+  border-radius: 8px;
+  width: 53px;
+  text-align: center;
+  background-color: #fff;
+  cursor: pointer;
+  color: #6B7284;
+  line-height: 22px;
+}
+.AstvToggleGroup .AstvToggleBtnT:hover {
+  color: #000;
+}
+.AstvToggleGroup.AstvToggleSel {
+  background-color: #fff;
+}
+.AstvToggleGroup.AstvToggleSel .AstvToggleBtnT {
+  background-color: var(--AstvBodyColor);
+  color: white;
+  font-weight: 600;
+}
+.AstvToggleGroup.AstvToggleSel .AstvToggleBtnF {
+  font-weight: 400;
+  background-color: #fff;
+  color: #6B7284;
+}
+.AstvToggleGroup.AstvToggleSel .AstvToggleBtnF:hover {
+  color: #000;
+}
+
+.acsb-trigger {
+  visibility: hidden !important;
+}
+.acsb-trigger.acsb-ready {
+  visibility: hidden !important;
+}
+
+.acsb-header-option-language {
+  display: none !important;
+}
+
+.acsb-header {
+  text-align: right !important;
+  display: block !important;
+  padding: 6px !important;
+}
+
+.acsb-actions-active-icon, .acsb-triggger-icon {
+  visibility: hidden !important;
+}
+
+.acsb-trigger-icon svg {
+  display: none !important;
+}
+
+body .acsb-widget .acsb-header-option i {
+  color: white !important;
+}
+
+.acsb-widget .acsb-header .acsb-header-option {
+  background-color: transparent !important;
+}
+
+.acsb-header-option-statement {
+  display: none !important;
+}
+
+.acsb-hero-action[data-acsb-popup-trigger=acsb-hide-popup] {
+  display: none !important;
+}
+
+.acsb-header-option {
+  display: inline-block !important;
+}
+
+.AssistiveSignsBox {
+  width: 288px;
+  height: 448px;
+  right: 10px;
+  position: fixed;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 2px 13px rgba(0, 0, 0, 0.4666666667) !important;
+  background-color: #f4f9fe;
+  bottom: 60px !important;
+  top: auto !important;
+  z-index: 10000;
+}
+.AssistiveIsTouch .AssistiveSignsBox {
+  width: 230px;
+  height: 368px;
+}
+.AssistiveSignsLeft .AssistiveSignsBox {
+  left: 10px;
+  right: auto;
+}
+.AssistiveSignsBox .AssistiveSignsFrameBox {
+  overflow: hidden;
+  width: 288px;
+  height: 468px;
+}
+.AssistiveIsTouch .AssistiveSignsBox .AssistiveSignsFrameBox {
+  width: 230px;
+  height: 374px;
+}
+.AssistiveSignsBox .AssistiveSignsFrameBox iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+  margin-top: -60px;
+}
+.AssistiveIsTouch .AssistiveSignsBox .AssistiveSignsFrameBox iframe {
+  margin-top: -48px;
+}
+
+.AssistiveSignsHeader {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 32px;
+  text-align: right;
+}
+.AssistiveSignsHeader .AssistiveSignsHeaderBtns {
+  display: inline-block;
+  margin-right: 8px;
+}
+.AssistiveSignsHeader .AssistiveHeaderBtn {
+  display: table-cell;
+  height: 32px;
+  width: 32px;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+  transition: all 0.15s ease;
+  line-height: 10px;
+}
+.AssistiveSignsHeader .AssistiveHeaderBtn:hover {
+  transform: scale(1.15);
+}
+.AssistiveSignsHeader .AstvBtnIcon {
+  background-size: cover;
+  background-position: center;
+  display: inline-block;
+}
+.AssistiveSignsHeader .AssistiveSignsClose .AstvBtnIcon {
+  background-image: url("IconStop.10.svg") !important;
+  height: 14px;
+  width: 14px;
+}
+.AssistiveSignsHeader .AssistiveSignsMove .AstvBtnIcon {
+  background-image: url("IconMove.8.svg") !important;
+  height: 24px;
+  width: 24px;
+}
+
+.AssistiveSignsFooter {
+  display: none;
+  position: absolute;
+  padding: 4px 0px;
+  width: 100%;
+  bottom: 0px;
+  font-size: 14px !important;
+  color: white;
+  text-align: center;
+  z-index: 1500;
+  cursor: pointer;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.AssistiveSignsFooter .AssistiveFooterLb {
+  color: #fff !important;
+  text-decoration: none !important;
+  font-size: 14px !important;
+  font-weight: normal !important;
+}
+.AssistiveSignsFooter .AssistiveFooterLb:hover {
+  text-decoration: underline !important;
+}
+.AssistiveSignsLoaded .AssistiveSignsFooter {
+  display: block;
+}
+
+.AssistiveSignsDialog {
+  display: none;
+  border-radius: 10px;
+  width: 200px;
+  position: absolute;
+  top: -126px;
+  margin-left: 5px;
+  color: white;
+  box-shadow: 0px 2px 13px rgba(0, 0, 0, 0.4666666667) !important;
+}
+.AssistiveSignsDialog::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 70%;
+  width: 0;
+  height: 0;
+  border: 12px solid transparent;
+  border-top-color: blue;
+  border-bottom: 0;
+  border-right: 0;
+  margin-left: -10px;
+  margin-bottom: -12px;
+  font-family: OpenSans-Regular !important;
+  line-height: 24px !important;
+  box-sizing: border-box !important;
+}
+.AssistiveSignsDialog p {
+  color: white;
+  font-size: 16px;
+  line-height: 22px;
+  padding: 22px 0px 0px 24px;
+}
+.AssistiveSignsDialog .AssistiveSignsDialogClose {
+  display: table-cell;
+  height: 32px;
+  width: 32px;
+  float: right;
+  margin-top: 8px;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+  transition: all 0.15s ease;
+}
+.AssistiveSignsDialog .AssistiveSignsDialogClose:hover {
+  transform: scale(1.15);
+}
+.AssistiveSignsDialog .AssistiveSignsDialogClose .AstvBtnIcon {
+  background-image: url("IconStop.10.svg") !important;
+  height: 14px;
+  width: 14px;
+  background-size: cover;
+  background-position: center;
+  display: inline-block;
+}
+
+.AssistiveSignsLoading {
+  display: block;
+  position: absolute;
+  height: 93%;
+  width: 100%;
+  bottom: 0px;
+  font-size: 16px !important;
+  color: #555;
+  background-color: #f4f9fe;
+  text-align: center;
+  z-index: 1501;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.AssistiveSignsLoaded .AssistiveSignsLoading {
+  display: none;
+}
+@keyframes rotate {
+  from {
+    transform: rotateZ(360deg);
+  }
+  to {
+    transform: rotateZ(0deg);
+  }
+}
+.AssistiveSignsLoading .AssistiveCircle {
+  position: absolute !important;
+  border: 3px solid transparent !important;
+  border-radius: 50% !important;
+  animation: rotate linear infinite !important;
+  border-top-color: #555;
+}
+.AssistiveSignsLoading .AssistiveCircle.AssistiveOne {
+  height: 50px;
+  width: 50px;
+  left: 50px;
+  top: 50px;
+  animation-duration: 0.85s !important;
+}
+.AssistiveSignsLoading .AssistiveCircle.AssistiveTwo {
+  height: 75px;
+  width: 75px;
+  top: 38px;
+  left: 38px;
+  animation-duration: 0.95s !important;
+}
+.AssistiveSignsLoading .AssistiveCircle.AssistiveThree {
+  height: 100px;
+  width: 100px;
+  top: 25px;
+  left: 25px;
+  animation-duration: 1.05s !important;
+}
+.AssistiveSignsLoading .AssistiveLoader {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  margin: -90px 0 0 -75px;
+}
+.AssistiveSignsLoading .AssistiveLT {
+  display: block;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 10%;
+  font-family: Segoe UI, SF Pro, Helvetica, Verdana, Tahoma, sans-serif, Arial !important;
+  font-size: 14px !important;
+}
+.AssistiveSignsLoading .AssistiveLogo {
+  background-image: url("AssistiveLogo.12.svg");
+  display: inline-block;
+  margin-top: 10%;
+  width: 65%;
+  margin-right: auto;
+  height: 144px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.AstvPlayerControl {
+  display: none;
+  box-shadow: 0px 1px 11px rgba(0, 0, 0, 0.3333333333);
+  border-radius: 10px;
+  background-color: #f4f9fe;
+  margin-bottom: 10px;
+  margin-bottom: calc(8px + env(safe-area-inset-bottom));
+}
+.AstvPlayerControl .AstvPlayerBtn {
+  padding: 0px !important;
+  background-color: #f4f9fe !important;
+  display: inline-block !important;
+  cursor: pointer !important;
+}
+.AstvPlayerControl .AstvPlayerBtn:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.AstvPlayerControl .AstvPlayerBtn:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.AstvPlayerControl .AstvPlayerBtn:hover .AstvBtnIcon {
+  transition: all 0.2s ease;
+  transform: scale(1.15);
+}
+.AstvPlayerControl .AstvPlayerBtn .AstvBtnIcon {
+  width: 20px !important;
+  height: 20px !important;
+  margin: 12px 12px !important;
+}
+.AstvSpeechActive .AstvPlayerControl {
+  display: block;
+}
+.AstvPlayerControl .AstvPauseBtn {
+  display: none !important;
+}
+.AstvPlayerControl .AstvPauseBtn .AstvBtnIcon {
+  background-image: url("IconPause.6.svg") !important;
+}
+.AstvPlayerControl .AstvSpeedBtn {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.AstvPlayerControl .AstvSpeedBtn .AstvBtnIcon {
+  background-image: url("IconSpeed.5.svg") !important;
+  width: 36px !important;
+  height: 36px !important;
+  margin: 4px 6px !important;
+}
+.AstvPlayerControl .AstvSpeedBtn .AstvSpeed {
+  position: absolute;
+  font-size: 14px;
+  line-height: 14px;
+  color: white;
+  top: 15px;
+  margin-left: 20px;
+  font-weight: bold;
+}
+.AstvPlayerControl .AstvPlayBtn {
+  display: none !important;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.AstvPlayerControl .AstvPlayBtn .AstvBtnIcon {
+  background-image: url("IconPlay.4.svg") !important;
+}
+.AstvPlayerControl .AstvStopBtn {
+  padding: 0px !important;
+}
+.AstvPlayerControl .AstvStopBtn .AstvBtnIcon {
+  background-image: url("IconStop.10.svg") !important;
+  width: 13px !important;
+  height: 13px !important;
+  margin: 16px !important;
+}
+.AstvPlayerControl .AstvSpeechCfgBtn .AstvBtnIcon {
+  background-image: url("IconGear.1.svg") !important;
+}
+.AstvHiddenChild .AstvPlayerControl {
+  display: none !important;
+}
+
+.AstvPaused .AstvPlayerControl .AstvPlayerBtn.AstvPreviousBtn, .AstvPaused .AstvPlayerControl .AstvPlayerBtn.AstvNextBtn, .AstvPaused .AstvPlayerControl .AstvPlayerBtn.AstvPauseBtn, .AstvPaused .AstvPlayerControl .AstvPlayerBtn.AstvSpeedBtn {
+  display: none !important;
+}
+.AstvPaused .AstvPlayerControl .AstvPlayerBtn.AstvPlayBtn {
+  display: inline-block !important;
+}
+
+.AstvSpeeching .AstvPlayerControl .AstvPlayerBtn.AstvPauseBtn {
+  display: inline-block !important;
+}
+
+.AstvStopped .AstvPlayerControl .AstvPlayerBtn.AstvPreviousBtn, .AstvStopped .AstvPlayerControl .AstvPlayerBtn.AstvNextBtn, .AstvStopped .AstvPlayerControl .AstvPlayerBtn.AstvPauseBtn, .AstvStopped .AstvPlayerControl .AstvPlayerBtn.AstvPlayBtn {
+  display: none !important;
+}
+.AstvStopped .AstvPlayerControl .AstvPlayerBtn.AstvSpeedBtn {
+  display: inline-block !important;
+}
+.AstvStopped .AstvPlayerControl .AstvPlayerBtn.AstvPlayBtn {
+  display: inline-block !important;
+}
+
+.AstvWaitingToSpeech .AstvPlayerControl .AstvPlayerBtn.AstvPlayBtn {
+  display: none !important;
+}
+
+.AssistiveReadAloudTag {
+  cursor: pointer;
+}
+
+.AssistiveReadingTag {
+  text-shadow: 1px 1px 3px #00a4ff !important;
+  outline: 2px solid rgba(0, 0, 0, 0.3333333333) !important;
+  outline-offset: 5px;
+}
+
+.AssistiveSpeechAccessBlock {
+  position: fixed;
+  width: 90px;
+  display: none;
+  z-index: 2147483647;
+}
+.AstvSpeechActive .AssistiveSpeechAccessBlock {
+  display: block;
+}
+.AssistiveSpeechAccessBlock .AssistiveAccessBtn {
+  color: #fff;
+  background-color: #4a90b8;
+  font-size: 16px;
+  font-family: Segoe UI, SF Pro, Helvetica, Verdana, Tahoma, sans-serif, Arial;
+  box-shadow: 0px 2px 13px rgba(0, 0, 0, 0.4666666667);
+  border-radius: 4px;
+  padding: 10px 15px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.AssistiveSpeechAccessBlock .AssistiveArrow {
+  position: relative;
+  width: 0px;
+  margin: 50px auto;
+  height: 0;
+  top: 1px;
+  left: 43px;
+  box-shadow: 0px 2px 13px rgba(0, 0, 0, 0.4666666667);
+}
+.AssistiveSpeechAccessBlock .AssistiveArrow::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 13px solid #4a90b8;
+  position: absolute;
+  right: -10px;
+  top: -15px;
+}
+.AssistiveSpeechAccessBlock:hover .AssistiveAccessBtn {
+  color: #fff;
+  background-color: rgb(48, 74, 149);
+  text-decoration: underline;
+}
+.AssistiveSpeechAccessBlock:hover .AssistiveArrow::after {
+  border-bottom-color: rgb(48, 74, 149);
+}
+
+.AstvSpeechCfg {
+  display: none;
+  position: relative;
+}
+.AstvSpeechCfg .AstvSpeechCfgBox {
+  box-shadow: 0px 1px 11px rgba(0, 0, 0, 0.3333333333);
+  border-radius: 10px;
+  background-color: #f4f9fe !important;
+  position: absolute;
+  bottom: 65px;
+  padding: 0 16px 16px 16px !important;
+  right: 0px;
+  width: 340px;
+}
+.AstvSpeechCfg .AstvTitle {
+  position: relative;
+}
+.AstvSpeechCfg .AstvTitleLabel {
+  font-weight: 600 !important;
+  margin-left: auto !important;
+  text-align: center !important;
+  font-size: 18px !important;
+  line-height: 180% !important;
+  flex: 1 0 auto !important;
+}
+.AstvSpeechCfg .AstvItem {
+  display: flex;
+  padding: 6px 0 6px 0 !important;
+  align-items: center;
+}
+.AstvSpeechCfg .AstvItemLabel {
+  flex-grow: 1;
+}
+.AstvSpeechCfg .AstvSpeechCfgCloseBtn {
+  flex-shrink: 0;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 0;
+  top: 0;
+  background-image: url(IconChevronDown.1.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: inherit;
+  border: none;
+  cursor: pointer !important;
+  outline: none !important;
+  border-radius: 8px !important;
+}
+.AstvSpeechCfg .AstvVoiceBox {
+  position: relative;
+}
+.AstvSpeechCfg .AstvVoiceBox:after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  margin-top: -1px;
+  right: 8px;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid black;
+}
+.AstvSpeechCfg .AsvSelVoice {
+  margin: auto !important;
+  margin-bottom: auto !important;
+  margin-top: auto !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  background: rgba(255, 255, 255, 0) !important;
+  background-image: none !important;
+  border: none !important;
+  cursor: pointer !important;
+  color: #000 !important;
+  outline: none !important;
+  border-radius: 5px !important;
+  padding: 5px 22px 5px 10px !important;
+  margin: 0;
+  margin-top: 5px;
+  line-height: 100% !important;
+  font-size: 16px !important;
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+  -moz-appearance: none !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+}
+.AstvSpeechCfg.AstvBottom .AstvSpeechCfgBox {
+  bottom: auto;
+}
+.AstvSpeechCfg.AstvCenter {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex !important;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.AstvSpeechCfg.AstvCenter .AstvSpeechCfgBox {
+  bottom: auto;
+  right: 10px;
+}
+
+.AssistiveHPosition_left .AstvSpeechCfgBox {
+  right: auto;
+  left: 0px;
+}
+
+.AssistiveIcon_default .AssistiveMainBtn .AstvBtnIcon {
+  background-image: url("TriggerIcon_default.7.svg") !important;
+}
+.AssistiveIcon_config .AssistiveMainBtn .AstvBtnIcon {
+  background-image: url("TriggerIcon_config.10.svg") !important;
+}
+.AssistiveIcon_gear .AssistiveMainBtn .AstvBtnIcon {
+  background-image: url("TriggerIcon_gear.4.svg") !important;
+}
+.AssistiveIcon_font .AssistiveMainBtn .AstvBtnIcon {
+  background-image: url("TriggerIcon_font.10.svg") !important;
+}
+.AssistiveIcon_wheelchair .AssistiveMainBtn .AstvBtnIcon {
+  background-image: url("TriggerIcon_wheelchair.11.svg") !important;
+}
+.AssistiveIcon_old .AssistiveMainBtn .AstvBtnIcon {
+  background-image: url("TriggerIcon_old.3.svg") !important;
+}
+.AssistiveBarOpen .AssistiveMainBtn .AstvBtnIcon {
+  background-image: url("IconStop.10.svg") !important;
+  background-size: 30% 30% !important;
+}
+
+.AssistiveBtnSize_small .AssistiveMainBtn {
+  height: 35px;
+  min-width: 35px;
+  box-shadow: 0px 3.5px 7px rgba(0, 0, 0, 0.4666666667);
+  padding: 0px;
+}
+
+.AssistiveBtnSize_medium .AssistiveMainBtn {
+  height: 56px;
+  min-width: 56px;
+  width: 56px;
+  min-height: 56px;
+  box-shadow: 0px 5.6px 11.2px rgba(0, 0, 0, 0.4666666667);
+  padding: 0px;
+}
+
+.AssistiveBtnSize_large .AssistiveMainBtn {
+  height: 60px;
+  min-width: 60px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4666666667);
+  padding: 0px;
+}
+
+.AssistiveBtnSize_small .AssistiveMainBtn .AstvBtnIcon {
+  width: 44px;
+  height: 44px;
+}
+.AssistiveBtnSize_small .AssistiveFloating .AssistiveFloatingItem .AssistiveBtn {
+  height: 44px;
+  min-width: 44px;
+  padding: 7px;
+}
+.AssistiveBtnSize_small .AssistiveFloating .AssistiveFloatingItem .AssistiveBtn .AstvBtnIcon {
+  width: 30px;
+  height: 30px;
+}
+
+.AssistiveBtnSize_medium .AssistiveMainBtn .AstvBtnIcon {
+  width: 56px;
+  height: 56px;
+}
+
+.AssistiveBtnSize_large .AssistiveMainBtn .AstvBtnIcon {
+  width: 68px;
+  height: 68px;
+}
+.AssistiveBtnSize_large .AssistiveFloating .AssistiveFloatingItem .AssistiveBtn {
+  height: 68px;
+  min-width: 68px;
+  padding: 10px;
+}
+.AssistiveBtnSize_large .AssistiveFloating .AssistiveFloatingItem .AssistiveBtn .AstvBtnIcon {
+  width: 46px;
+  height: 46px;
+}
+
+.AssistiveBtnSize_large.AssistiveBarOpen .AssistiveFloatingBar .AssistiveBtn.AssistiveMainBtn {
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.6666666667) !important;
+}
+
+.AssistiveBtnSize_medium.AssistiveBarOpen .AssistiveFloatingBar .AssistiveBtn.AssistiveMainBtn {
+  box-shadow: 0px 5.6px 11.2px rgba(0, 0, 0, 0.6666666667) !important;
+}
+
+.AssistiveBtnSize_small.AssistiveBarOpen .AssistiveFloatingBar .AssistiveBtn.AssistiveMainBtn {
+  box-shadow: 0px 3.5px 7px rgba(0, 0, 0, 0.6666666667) !important;
+}
+
+.AssistiveVPosition_bottom .AssistiveFloating {
+  bottom: 0px;
+}
+.AssistiveVPosition_bottom.AssistiveBarOpen.AssistiveBtnSize_small .AssistiveFloatingItemsBox {
+  bottom: 45px;
+}
+.AssistiveVPosition_bottom.AssistiveBarOpen.AssistiveBtnSize_medium .AssistiveFloatingItemsBox {
+  bottom: 60px;
+}
+.AssistiveVPosition_bottom.AssistiveBarOpen.AssistiveBtnSize_large .AssistiveFloatingItemsBox {
+  bottom: 76px;
+}
+
+.AssistiveVPosition_top .AssistiveFloating {
+  top: 0px;
+}
+.AssistiveVPosition_top.AssistiveBarOpen.AssistiveBtnSize_small .AssistiveFloatingItemsBox {
+  top: 45px;
+}
+.AssistiveVPosition_top.AssistiveBarOpen.AssistiveBtnSize_medium .AssistiveFloatingItemsBox {
+  top: 60px;
+}
+.AssistiveVPosition_top.AssistiveBarOpen.AssistiveBtnSize_large .AssistiveFloatingItemsBox {
+  top: 76px;
+}
+
+.AssistiveVPosition_center .AssistiveFloating {
+  top: 50% !important;
+  bottom: 0px !important;
+}
+.AssistiveVPosition_center.AssistiveBarOpen.AssistiveBtnSize_small .AssistiveFloatingItemsBox {
+  top: 45px;
+}
+.AssistiveVPosition_center.AssistiveBarOpen.AssistiveBtnSize_medium .AssistiveFloatingItemsBox {
+  top: 60px;
+}
+.AssistiveVPosition_center.AssistiveBarOpen.AssistiveBtnSize_large .AssistiveFloatingItemsBox {
+  top: 76px;
+}
+
+.AssistiveHPosition_left .AssistiveFloating {
+  left: 0px;
+}
+.AssistiveHPosition_left.AssistiveBtnSize_small.AssistiveBarOpen .AssistiveFloatingItemsBox {
+  left: 0px;
+}
+.AssistiveHPosition_left.AssistiveBtnSize_medium.AssistiveBarOpen .AssistiveFloatingItemsBox {
+  left: 0px;
+}
+.AssistiveHPosition_left.AssistiveBtnSize_large.AssistiveBarOpen .AssistiveFloatingItemsBox {
+  left: 0px;
+}
+.AssistiveHPosition_left .AssistiveMobileLabel {
+  left: 60px;
+}
+.AssistiveHPosition_left.AssistiveBtnSize_small .AssistiveMainToast {
+  top: 7px;
+  left: 50px;
+}
+.AssistiveHPosition_left.AssistiveBtnSize_medium .AssistiveMainToast {
+  top: 15px;
+  left: 65px;
+}
+.AssistiveHPosition_left.AssistiveBtnSize_large .AssistiveMainToast {
+  top: 20px;
+  left: 75px;
+}
+
+.AssistiveHPosition_right .AssistiveFloating {
+  right: 0px;
+}
+.AssistiveHPosition_right.AssistiveBtnSize_small.AssistiveBarOpen .AssistiveFloatingItemsBox {
+  right: 0px;
+}
+.AssistiveHPosition_right.AssistiveBtnSize_medium.AssistiveBarOpen .AssistiveFloatingItemsBox {
+  right: 0px;
+}
+.AssistiveHPosition_right.AssistiveBtnSize_large.AssistiveBarOpen .AssistiveFloatingItemsBox {
+  right: 0px;
+}
+.AssistiveHPosition_right.AssistiveBtnSize_small .AssistiveMainToast {
+  top: 7px;
+  right: 50px;
+}
+.AssistiveHPosition_right.AssistiveBtnSize_medium .AssistiveMainToast {
+  top: 15px;
+  right: 65px;
+}
+.AssistiveHPosition_right.AssistiveBtnSize_large .AssistiveMainToast {
+  top: 20px;
+  right: 75px;
+}
+.AssistiveHPosition_right .AssistiveMobileLabel {
+  right: 60px;
+}
+.AssistiveHPosition_right .AssistiveFloatingItem {
+  text-align: right;
+  float: right;
+  clear: both;
+}
+.AssistiveHPosition_right .AssistiveFloatingItem .AssistiveBtn:hover {
+  padding-left: 10px;
+}
+.AssistiveHPosition_right .AssistiveFloatingItem .AssistiveBtn:hover .AssistiveBL {
+  padding-left: 10px;
+}
+
+.AstvSkipMenu {
+  display: block !important;
+}
+
+.AstvSkipItem {
+  position: absolute;
+  left: -10000px;
+  border-radius: 8px;
+  border: 1px solid #DFDFDF;
+  box-shadow: 0px 1px 3px 0px rgba(0, 27, 96, 0.1019607843);
+  background-color: white;
+  color: black;
+  padding: 12px 16px 12px 16px !important;
+  font-weight: 500 !important;
+  font-size: 18px !important;
+  line-height: 120% !important;
+  text-align: left !important;
+  font-family: Segoe UI, SF Pro, Helvetica, Verdana, Tahoma, sans-serif, Arial;
+  letter-spacing: normal !important;
+  word-spacing: normal !important;
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+  z-index: 2147483647;
+}
+.AstvSkipItem:focus {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  border: none;
+  outline: none;
+  z-index: 1;
+}
+.AstvSkipItem .AstvShortcut {
+  background-color: var(--AstvBodyColor);
+  color: white;
+  border-radius: 8px;
+  padding: 6px 9px 9px 9px;
+  margin-left: 20px;
+  display: inline-block;
+}
+.AstvSkipItem .AstvShortcut .AstvKeyName {
+  font-size: 14px;
+  font-weight: 400;
+}
+.AstvSkipItem .AstvIcon {
+  display: inline-block;
+  -webkit-mask-image: url("IconEnter.2.svg") !important;
+  mask-image: url("IconEnter.2.svg") !important;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  background-color: white;
+  width: 22px;
+  height: 22px;
+  line-height: 18px;
+  position: relative;
+  top: 4px;
+  margin-left: 9px;
+}
+.AstvSkipItem .AstvCheckIcon {
+  display: inline-block;
+  -webkit-mask-image: url("IconChecked.1.svg") !important;
+  mask-image: url("IconChecked.1.svg") !important;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  background-color: var(--AstvBodyColor);
+  width: 40px;
+  height: 40px;
+  line-height: 18px;
+  position: absolute;
+  top: 13px;
+  margin-right: 9px;
+}
+
+.AstvSkipScreenReader .AstvLabel {
+  padding-left: 48px;
+}
+
+.AstvSkipScreenReader[aria-pressed=false] .AstvCheckIcon {
+  background-color: #ddd;
+}
+
+.AstvScreenReaderMsg {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  max-width: 1px;
+  max-height: 1px;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0);
+}
+
+.AstvWin {
+  text-align: center;
+  display: none;
+  position: fixed;
+  left: 10px;
+  bottom: 13px;
+  width: 376px;
+  background-color: white;
+  color: #ffffff;
+  z-index: 14000000000;
+  flex-direction: column;
+  height: calc(100vh - 26px);
+  height: calc(100dvh - 26px);
+  overflow: hidden;
+  border-radius: 20px;
+  padding: 0;
+  -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.67);
+  -moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.67);
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.67);
+  font-family: Segoe UI, SF Pro, Helvetica, Verdana, Tahoma, sans-serif, Arial !important;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+  text-align: left;
+  letter-spacing: normal;
+  word-spacing: normal;
+}
+@media (max-width: 376px) {
+  .AstvWin {
+    left: 3px;
+    max-width: 353px;
+  }
+}
+@media (max-width: 320px) {
+  .AstvWin {
+    left: 3px;
+    max-width: 290px;
+  }
+}
+.AstvWin h1, .AstvWin h2, .AstvWin h3, .AstvWin h4, .AstvWin p, .AstvWin div, .AstvWin span, .AstvWin button, .AstvWin a, .AstvWin select {
+  height: auto;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  text-align: left;
+  font-family: Segoe UI, SF Pro, Helvetica, Verdana, Tahoma, sans-serif, Arial !important;
+  letter-spacing: normal;
+  word-spacing: normal;
+  white-space: normal;
+  box-shadow: none;
+  color: #000;
+  padding: 0;
+  text-transform: none;
+  margin-left: 0;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+}
+.AstvWin h1:hover, .AstvWin h2:hover, .AstvWin h3:hover, .AstvWin h4:hover, .AstvWin p:hover, .AstvWin div:hover, .AstvWin span:hover, .AstvWin button:hover, .AstvWin a:hover, .AstvWin select:hover {
+  box-shadow: none;
+}
+.AstvWin button {
+  min-width: auto !important;
+  display: block;
+}
+.AstvWin.AstvPosRight {
+  left: auto;
+  right: 10px;
+}
+[astv-win] .AstvWin {
+  display: flex;
+}
+.AstvWin button.AstvViewMainBodyBtn {
+  font-size: 16px;
+  margin: 0 10px;
+  padding: 10px 16px;
+  min-width: 30%;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--AstvBodyColor);
+  color: white;
+  cursor: pointer;
+}
+.AstvWin button.AstvViewMainBodyBtn:hover {
+  filter: brightness(120%);
+}
+.AstvWin button.AstvViewMainBodyBtn:active {
+  filter: brightness(90%);
+}
+
+.AstvWinContent {
+  display: none;
+  flex: 1;
+  min-height: 0;
+  padding-bottom: 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.AstvWinContent::-webkit-scrollbar {
+  width: 4px;
+}
+.AstvWinContent::-webkit-scrollbar-track {
+  background: transparent;
+}
+.AstvWinContent::-webkit-scrollbar-thumb {
+  background-color: rgba(155, 155, 155, 0.5);
+  border-radius: 2px;
+  border: transparent;
+}
+.AssistivePlugin[data-astv-show-view] .AstvWinContent {
+  display: none !important;
+  margin-bottom: 10px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.AstvWin .AstvWinHeader button {
+  height: 40px;
+  width: 40px !important;
+  margin: 4px;
+  padding: 0;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  outline: none !important;
+  border-radius: 8px;
+}
+.AstvWin .AstvWinHeader button:hover {
+  background-color: rgba(255, 255, 255, 0.2509803922);
+}
+.AstvWin .AstvWinHeader button:focus-visible {
+  outline: 2px solid white !important;
+}
+.AstvWin .AstvWinHeader .AstvWinBtnClose {
+  background-image: url("IconClose.2.svg");
+}
+.AstvWin .AstvMainHeader {
+  flex-shrink: 0;
+}
+.AssistivePlugin[data-astv-show-view] .AstvWin .AstvMainHeader {
+  display: none;
+}
+.AstvWin .AstvMainHeader {
+  background-color: var(--AstvBodyColor);
+  border-radius: 15px 15px 0 0;
+}
+.AstvWin .AstvMainHeader .AstvTopHeader {
+  height: 48px;
+  display: flex;
+  justify-content: space-between;
+}
+.AstvWin .AstvMainHeader .AstvTopHeader .AstvHeaderLeft {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+.AstvWin .AstvMainHeader .AstvTopHeader .AstvHeaderLeft a {
+  outline: none !important;
+  transition: none !important;
+}
+.AstvWin .AstvMainHeader .AstvTopHeader .AstvHeaderLeft a:focus-visible {
+  border-radius: 8px;
+  outline: 2px solid white !important;
+  outline-offset: 2px;
+  transition: none !important;
+}
+.AstvWin .AstvMainHeader .AstvTopHeader .AstvHeaderRight {
+  height: 48px;
+}
+.AstvWin .AstvMainHeader .AstvMainTitle {
+  height: 34px;
+  font-size: 14px;
+  line-height: 34px;
+  color: white;
+}
+.AstvWin .AstvMainHeader .AstvLogo {
+  display: inline-block;
+  margin-left: 17px;
+  width: 90px !important;
+  height: 24px;
+  background-image: url("AssistiveLogo.12.svg") !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.AstvWin .AstvBackHeader {
+  display: none;
+  flex-shrink: 0;
+  height: 48px;
+  background-color: var(--AstvBodyColor);
+  border-radius: 15px 15px 0 0;
+  justify-content: left;
+}
+.AssistivePlugin[data-astv-show-view] .AstvWin .AstvBackHeader {
+  display: flex;
+}
+.AstvWin .AstvBackHeader .AstvWinBtnBack {
+  width: 40px !important;
+  justify-content: space-between;
+  background-image: url("IconBack.1.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  outline: none !important;
+  margin: 4px;
+}
+.AstvWin .AstvBackHeader .AstvWinBtnBack:hover {
+  background-color: rgba(255, 255, 255, 0.2509803922);
+  border-radius: 8px;
+}
+.AstvWin .AstvBackHeader .AstvWinBtnBack:focus-visible {
+  outline: 2px solid white !important;
+}
+.AstvWin .AstvBackHeader .AstvWinTitle {
+  flex-wrap: wrap;
+  align-content: center;
+  font-size: 16px;
+  flex-grow: 1;
+  height: 48px;
+  font-size: 16px;
+  text-align: center;
+  line-height: 48px;
+  color: white;
+}
+
+.AstvWin.AstvPosLeft .AstvWinBtnMove {
+  background-image: url("IconMoveRight.2.svg");
+}
+
+.AstvWin.AstvPosRight .AstvWinBtnMove {
+  background-image: url("IconMoveLeft.3.svg");
+}
+
+.AstvNavbar {
+  display: flex;
+  flex-shrink: 0;
+  background-color: white;
+  padding-top: 5px;
+  box-shadow: 0px 1px 3px rgba(0, 27, 96, 0.1), 0px 10px 20px rgba(0, 27, 96, 0.22);
+  border: none;
+  border-top: 1px solid #DFDFDF;
+  border-radius: 0 0 15px 15px;
+  text-align: center;
+  line-height: 0px;
+}
+.AssistivePlugin[data-astv-show-view] .AstvNavbar {
+  display: none;
+}
+.AstvNavbar .AstvNavItem {
+  display: inline-block;
+  cursor: pointer;
+  flex-grow: 1;
+  text-align: center !important;
+  font-size: 12px;
+}
+.AstvNavbar .AstvNavButton {
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px !important;
+  width: 92% !important;
+  padding-top: 10px !important;
+  text-align: center !important;
+  line-height: 0px !important;
+  outline: none !important;
+  margin-top: 4px !important;
+  font-size: 14px;
+  line-height: 14px !important;
+  text-align: center !important;
+  height: 60px;
+}
+.AstvNavbar .AstvNavButton:hover {
+  background-color: #EEF0F4;
+}
+.AstvNavbar .AstvNavButton:active {
+  background-color: #D3D3D3;
+}
+.AstvNavbar .AstvNavButton:focus-visible {
+  outline: 2px solid var(--AstvBodyColor) !important;
+}
+.AstvNavbar .AstvNavLabel {
+  font-size: 14px;
+  color: #6B6B6B;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  text-align: center;
+  line-height: 12px;
+  font-weight: 500;
+}
+.AstvNavbar .AstvNavSelBlk {
+  font-size: 14px;
+  height: 4px;
+  display: block;
+  text-align: center !important;
+  line-height: 0px !important;
+}
+.AstvNavbar .AstvNavSel {
+  background-color: var(--AstvBodyColor);
+  visibility: hidden;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  display: inline-block;
+  width: 5em;
+  position: relative;
+  bottom: 0px;
+  height: 100%;
+  line-height: 0px !important;
+}
+.AstvNavbar .AstvNavSelected .AstvNavSel {
+  visibility: visible;
+}
+.AstvNavbar .AstvNavSelected .AstvNavIcon {
+  background-color: var(--AstvBodyColor);
+}
+.AstvNavbar .AstvNavSelected .AstvNavLabel {
+  color: var(--AstvBodyColor);
+}
+
+.AstvNavIcon {
+  width: 24px !important;
+  height: 24px !important;
+  display: inline-block;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  background-color: #040304;
+}
+.AstvNavMain .AstvNavIcon {
+  width: 22px;
+  height: 22px;
+  margin-bottom: 2px;
+  -webkit-mask-image: url("IconNavMain.1.svg") !important;
+  mask-image: url("IconNavMain.1.svg") !important;
+}
+.AstvNavSigns .AstvNavIcon {
+  -webkit-mask-image: url("IconNavSigns.3.svg") !important;
+  mask-image: url("IconNavSigns.3.svg") !important;
+}
+.AstvNavHelp .AstvNavIcon {
+  -webkit-mask-image: url("IconNavHelp.3.svg") !important;
+  mask-image: url("IconNavHelp.3.svg") !important;
+}
+
+.AstvWinToolbar {
+  background-color: var(--AstvBodyColor);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+.AstvWinToolbar .AstvLeft {
+  padding-top: 3px;
+}
+.AstvWinToolbar button {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 14px;
+  line-height: 22px;
+  padding: 7px 10px 1px 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none !important;
+  margin-left: 5px;
+}
+.AstvWinToolbar button:hover {
+  background-color: rgba(255, 255, 255, 0.2509803922);
+}
+.AstvWinToolbar button:first-child {
+  margin-left: 0px;
+}
+.AstvWinToolbar button:focus-visible {
+  outline: 2px solid white !important;
+}
+.AstvWinToolbar select {
+  background-color: rgba(255, 255, 255, 0) !important;
+  background-image: none !important;
+  border: none !important;
+  cursor: pointer !important;
+  color: white !important;
+  outline: none !important;
+  border-radius: 5px !important;
+  padding: 5px 22px 5px 10px !important;
+  margin: 0;
+  margin-top: 5px;
+  line-height: 100% !important;
+  font-size: 16px !important;
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+  -moz-appearance: none !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+}
+.AstvWinToolbar select:hover {
+  background-color: rgba(255, 255, 255, 0.2509803922);
+}
+.AstvWinToolbar select:focus-visible {
+  outline: 2px solid white !important;
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}
+.AstvWinToolbar select option {
+  background: white;
+  color: #000;
+}
+.AstvWinToolbar .AstvLangBox {
+  position: relative;
+}
+.AstvWinToolbar .AstvLangBox:after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  margin-top: 1px;
+  right: 8px;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid white;
+}
+.AstvWinToolbar .AstvBtnLabel {
+  display: inline-block;
+  color: white;
+}
+.AstvWinToolbar .AstvBtnIcon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(255, 255, 255, 0);
+  background-image: url("IconReset.2.svg");
+  background-size: contain;
+}
+.AstvWinToolbar .AstvBtnTextIcon {
+  padding: 10px;
+}
+.AstvWinToolbar .AstvBtnTextIcon .AstvBtnIcon {
+  position: relative;
+  top: 3px;
+  margin-left: 7px;
+  width: 16px;
+  height: 16px;
+}
+.AstvWinToolbar .AsvBtnXL, .AstvWinToolbar .AsvBtnHide {
+  display: none;
+}
+
+.AstvWin .AstvTip {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  margin-top: -6px;
+}
+.AstvWin .AstvTipBox {
+  background-color: black;
+  position: absolute;
+  width: 360px;
+  border-radius: 8px;
+  bottom: 8px;
+  padding: 7px 15px 0px 18px;
+}
+.AstvWin .AstvTipBox .AstvTxt {
+  color: white;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+}
+.AstvWin .AstvTipBox .AstvArrowDown {
+  width: 0;
+  height: 0;
+  border-left: 15px solid rgba(255, 255, 255, 0);
+  border-right: 15px solid rgba(255, 255, 255, 0);
+  border-top: 13px solid #000;
+  font-size: 0;
+  line-height: 0;
+  position: relative;
+  top: 12px;
+}
+.AstvWin.AstvPosRight .AstvTipBox {
+  right: -129px;
+}
+.AstvWin.AstvPosRight .AstvArrowDown {
+  margin-right: 86px;
+  float: right;
+}
+.AstvWin.AstvPosLeft .AstvTipBox {
+  left: -30px;
+}
+.AstvWin.AstvPosLeft .AstvArrowDown {
+  margin-left: 10px;
+  float: left;
+}
+
+.AstvBtn_textsize .AstvTip {
+  _display: block;
+}
+
+[data-astv-focus] :focus {
+  outline: 4px solid var(--AstvFocusColor) !important;
+  outline-offset: 2px !important;
+  z-index: 100000 !important;
+}
+
+@font-face {
+  font-family: OpenDyslexic;
+  src: url("OpenDyslexic-Regular.1.otf") format("opentype");
+}
+@font-face {
+  font-family: OpenDyslexic;
+  font-weight: bold;
+  src: url("OpenDyslexic-Bold.1.otf") format("opentype");
+}
+@font-face {
+  font-family: OpenDyslexic;
+  font-style: italic;
+  src: url("OpenDyslexic-Italic.1.otf") format("opentype");
+}
+@font-face {
+  font-family: OpenDyslexic;
+  font-weight: bold;
+  font-style: italic;
+  src: url("OpenDyslexic-BoldItalic.1.otf") format("opentype");
+}
+[data-astv-font=dyslexic] body *:not(.AssistivePlugin *, .AstvIgnoreStyle, .AstvIgnoreStyle *, .AstvBtnLabel, .AstvBtnIndicators, .AstvBtnIndicator, .AstvNavButton, .AstvSignsTitle, .AstvWinSignsContent, .AstvSignsMainBtnBox, .AstvSignsSubtitle, .AstvNavItem, .AstvNavLabel, .AstvNavSelBlk, .AstvGroupTitle, .AstvBtnProfileTitle, .AstvBtnProfileDetail, .AstvBtnProfileTitle, .AstvProfileCenter, .AstvBtnLabel .AstvTitle, .AstvSubtitle, .AstvFeedback *, .AstvFeedbackSubtitle, .material-symbols-outlined, .AstvSpeechCfg *, .AstvSpeechCfg .AstvItemLabel, i) {
+  font-family: OpenDyslexic, Verdana, Geneva, Tahoma, sans-serif !important;
+}
+
+[data-astv-font=sansserif] body *:not(.AssistivePlugin *, .AstvIgnoreStyle, .AstvIgnoreStyle *, .AstvBtnLabel, .AstvBtnIndicators, .AstvBtnIndicator, .AstvNavButton, .AstvSignsTitle, .AstvWinSignsContent, .AstvSignsMainBtnBox, .AstvSignsSubtitle, .AstvNavItem, .AstvNavLabel, .AstvNavSelBlk, .AstvGroupTitle, .AstvBtnProfileTitle, .AstvBtnProfileDetail, .AstvBtnProfileTitle, .AstvProfileCenter, .AstvBtnLabel .AstvTitle, .AstvSubtitle, .AstvFeedback *, .AstvFeedbackSubtitle, .material-symbols-outlined, .AstvSpeechCfg *, .AstvSpeechCfg .AstvItemLabel, i) {
+  font-family: Verdana, Tahoma, Geneva, sans-serif !important;
+}
+
+[data-astv-font=serif] body *:not(.AssistivePlugin *, .AstvIgnoreStyle, .AstvIgnoreStyle *, .AstvBtnLabel, .AstvBtnIndicators, .AstvBtnIndicator, .AstvNavButton, .AstvSignsTitle, .AstvWinSignsContent, .AstvSignsMainBtnBox, .AstvSignsSubtitle, .AstvNavItem, .AstvNavLabel, .AstvNavSelBlk, .AstvGroupTitle, .AstvBtnProfileTitle, .AstvBtnProfileDetail, .AstvBtnProfileTitle, .AstvProfileCenter, .AstvBtnLabel .AstvTitle, .AstvSubtitle, .AstvFeedback *, .AstvFeedbackSubtitle, .material-symbols-outlined, .AstvSpeechCfg *, .AstvSpeechCfg .AstvItemLabel, i) {
+  font-family: Georgia, serif !important;
+}
+
+.AstvTooltipBlock {
+  position: fixed;
+  display: none;
+  max-width: 400px;
+  z-index: 1000000000;
+}
+
+.AstvTooltipText {
+  background-color: #111111;
+  display: block;
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  padding: 10px;
+  outline-color: black;
+  outline-width: 3px;
+  outline-offset: 2px;
+  outline-style: auto;
+}
+
+[data-astv-align=center] *:not(.AssistivePlugin *, .AstvIgnoreStyle, .AstvIgnoreStyle *, .AstvBtnLabel, .AstvBtnIndicators, .AstvBtnIndicator, .AstvNavButton, .AstvSignsTitle, .AstvWinSignsContent, .AstvSignsMainBtnBox, .AstvSignsSubtitle, .AstvNavItem, .AstvNavLabel, .AstvNavSelBlk, .AstvGroupTitle, .AstvBtnProfileTitle, .AstvBtnProfileDetail, .AstvBtnProfileTitle, .AstvProfileCenter, .AstvBtnLabel .AstvTitle, .AstvSubtitle, .AstvFeedback *, .AstvFeedbackSubtitle, .material-symbols-outlined, .AstvSpeechCfg *, .AstvSpeechCfg .AstvItemLabel) {
+  text-align: center !important;
+}
+
+[data-astv-align=left] *:not(.AssistivePlugin *, .AstvIgnoreStyle, .AstvIgnoreStyle *, .AstvBtnLabel, .AstvBtnIndicators, .AstvBtnIndicator, .AstvNavButton, .AstvSignsTitle, .AstvWinSignsContent, .AstvSignsMainBtnBox, .AstvSignsSubtitle, .AstvNavItem, .AstvNavLabel, .AstvNavSelBlk, .AstvGroupTitle, .AstvBtnProfileTitle, .AstvBtnProfileDetail, .AstvBtnProfileTitle, .AstvProfileCenter, .AstvBtnLabel .AstvTitle, .AstvSubtitle, .AstvFeedback *, .AstvFeedbackSubtitle, .material-symbols-outlined, .AstvSpeechCfg *, .AstvSpeechCfg .AstvItemLabel) {
+  text-align: left !important;
+}
+
+[data-astv-align=justify] *:not(.AssistivePlugin *, .AstvIgnoreStyle, .AstvIgnoreStyle *, .AstvBtnLabel, .AstvBtnIndicators, .AstvBtnIndicator, .AstvNavButton, .AstvSignsTitle, .AstvWinSignsContent, .AstvSignsMainBtnBox, .AstvSignsSubtitle, .AstvNavItem, .AstvNavLabel, .AstvNavSelBlk, .AstvGroupTitle, .AstvBtnProfileTitle, .AstvBtnProfileDetail, .AstvBtnProfileTitle, .AstvProfileCenter, .AstvBtnLabel .AstvTitle, .AstvSubtitle, .AstvFeedback *, .AstvFeedbackSubtitle, .material-symbols-outlined, .AstvSpeechCfg *, .AstvSpeechCfg .AstvItemLabel) {
+  text-align: justify !important;
+}
+
+[data-astv-align=right] *:not(.AssistivePlugin *, .AstvIgnoreStyle, .AstvIgnoreStyle *, .AstvBtnLabel, .AstvBtnIndicators, .AstvBtnIndicator, .AstvNavButton, .AstvSignsTitle, .AstvWinSignsContent, .AstvSignsMainBtnBox, .AstvSignsSubtitle, .AstvNavItem, .AstvNavLabel, .AstvNavSelBlk, .AstvGroupTitle, .AstvBtnProfileTitle, .AstvBtnProfileDetail, .AstvBtnProfileTitle, .AstvProfileCenter, .AstvBtnLabel .AstvTitle, .AstvSubtitle, .AstvFeedback *, .AstvFeedbackSubtitle, .material-symbols-outlined, .AstvSpeechCfg *, .AstvSpeechCfg .AstvItemLabel) {
+  text-align: right !important;
+}
+
+[data-astv-image] img:not(.AssistivePlugin *, .AstvIgnoreStyle, .AstvIgnoreStyle *, .AstvBtnLabel, .AstvBtnIndicators, .AstvBtnIndicator, .AstvNavButton, .AstvSignsTitle, .AstvWinSignsContent, .AstvSignsMainBtnBox, .AstvSignsSubtitle, .AstvNavItem, .AstvNavLabel, .AstvNavSelBlk, .AstvGroupTitle, .AstvBtnProfileTitle, .AstvBtnProfileDetail, .AstvBtnProfileTitle, .AstvProfileCenter, .AstvBtnLabel .AstvTitle, .AstvSubtitle, .AstvFeedback *, .AstvFeedbackSubtitle, .material-symbols-outlined, .AstvSpeechCfg *, .AstvSpeechCfg .AstvItemLabel) {
+  visibility: hidden !important;
+}
+
+[data-astv-image] svg:not(.AssistivePlugin *, .AstvIgnoreStyle, .AstvIgnoreStyle *, .AstvBtnLabel, .AstvBtnIndicators, .AstvBtnIndicator, .AstvNavButton, .AstvSignsTitle, .AstvWinSignsContent, .AstvSignsMainBtnBox, .AstvSignsSubtitle, .AstvNavItem, .AstvNavLabel, .AstvNavSelBlk, .AstvGroupTitle, .AstvBtnProfileTitle, .AstvBtnProfileDetail, .AstvBtnProfileTitle, .AstvProfileCenter, .AstvBtnLabel .AstvTitle, .AstvSubtitle, .AstvFeedback *, .AstvFeedbackSubtitle, .material-symbols-outlined, .AstvSpeechCfg *, .AstvSpeechCfg .AstvItemLabel) {
+  visibility: hidden !important;
+}
+
+[data-astv-image] video[loop] {
+  visibility: hidden !important;
+}
+
+[data-astv-image] body *:not(.AssistivePlugin *, .AstvIgnoreStyle, .AstvIgnoreStyle *, .AstvBtnLabel, .AstvBtnIndicators, .AstvBtnIndicator, .AstvNavButton, .AstvSignsTitle, .AstvWinSignsContent, .AstvSignsMainBtnBox, .AstvSignsSubtitle, .AstvNavItem, .AstvNavLabel, .AstvNavSelBlk, .AstvGroupTitle, .AstvBtnProfileTitle, .AstvBtnProfileDetail, .AstvBtnProfileTitle, .AstvProfileCenter, .AstvBtnLabel .AstvTitle, .AstvSubtitle, .AstvFeedback *, .AstvFeedbackSubtitle, .material-symbols-outlined, .AstvSpeechCfg *, .AstvSpeechCfg .AstvItemLabel) {
+  background-image: none !important;
+}
+
+[data-astv-linespacing="1"] body *:not(.AssistivePlugin *, .AstvIgnoreStyle, .AstvIgnoreStyle *, .AstvBtnLabel, .AstvBtnIndicators, .AstvBtnIndicator, .AstvNavButton, .AstvSignsTitle, .AstvWinSignsContent, .AstvSignsMainBtnBox, .AstvSignsSubtitle, .AstvNavItem, .AstvNavLabel, .AstvNavSelBlk, .AstvGroupTitle, .AstvBtnProfileTitle, .AstvBtnProfileDetail, .AstvBtnProfileTitle, .AstvProfileCenter, .AstvBtnLabel .AstvTitle, .AstvSubtitle, .AstvFeedback *, .AstvFeedbackSubtitle, .material-symbols-outlined, .AstvSpeechCfg *, .AstvSpeechCfg .AstvItemLabel) {
+  line-height: 1.2em !important;
+}
+
+[data-astv-linespacing="2"] body *:not(.AssistivePlugin *, .AstvIgnoreStyle, .AstvIgnoreStyle *, .AstvBtnLabel, .AstvBtnIndicators, .AstvBtnIndicator, .AstvNavButton, .AstvSignsTitle, .AstvWinSignsContent, .AstvSignsMainBtnBox, .AstvSignsSubtitle, .AstvNavItem, .AstvNavLabel, .AstvNavSelBlk, .AstvGroupTitle, .AstvBtnProfileTitle, .AstvBtnProfileDetail, .AstvBtnProfileTitle, .AstvProfileCenter, .AstvBtnLabel .AstvTitle, .AstvSubtitle, .AstvFeedback *, .AstvFeedbackSubtitle, .material-symbols-outlined, .AstvSpeechCfg *, .AstvSpeechCfg .AstvItemLabel) {
+  line-height: 1.4em !important;
+}
+
+[data-astv-linespacing="3"] body *:not(.AssistivePlugin *, .AstvIgnoreStyle, .AstvIgnoreStyle *, .AstvBtnLabel, .AstvBtnIndicators, .AstvBtnIndicator, .AstvNavButton, .AstvSignsTitle, .AstvWinSignsContent, .AstvSignsMainBtnBox, .AstvSignsSubtitle, .AstvNavItem, .AstvNavLabel, .AstvNavSelBlk, .AstvGroupTitle, .AstvBtnProfileTitle, .AstvBtnProfileDetail, .AstvBtnProfileTitle, .AstvProfileCenter, .AstvBtnLabel .AstvTitle, .AstvSubtitle, .AstvFeedback *, .AstvFeedbackSubtitle, .material-symbols-outlined, .AstvSpeechCfg *, .AstvSpeechCfg .AstvItemLabel) {
+  line-height: 1.6em !important;
+}
+
+[data-astv-charspacing="1"] body *:not(.AssistivePlugin *, .AstvIgnoreStyle, .AstvIgnoreStyle *, .AstvBtnLabel, .AstvBtnIndicators, .AstvBtnIndicator, .AstvNavButton, .AstvSignsTitle, .AstvWinSignsContent, .AstvSignsMainBtnBox, .AstvSignsSubtitle, .AstvNavItem, .AstvNavLabel, .AstvNavSelBlk, .AstvGroupTitle, .AstvBtnProfileTitle, .AstvBtnProfileDetail, .AstvBtnProfileTitle, .AstvProfileCenter, .AstvBtnLabel .AstvTitle, .AstvSubtitle, .AstvFeedback *, .AstvFeedbackSubtitle, .material-symbols-outlined, .AstvSpeechCfg *, .AstvSpeechCfg .AstvItemLabel) {
+  letter-spacing: 0.05em !important;
+  word-spacing: 0.15em !important;
+}
+
+[data-astv-charspacing="2"] body *:not(.AssistivePlugin *, .AstvIgnoreStyle, .AstvIgnoreStyle *, .AstvBtnLabel, .AstvBtnIndicators, .AstvBtnIndicator, .AstvNavButton, .AstvSignsTitle, .AstvWinSignsContent, .AstvSignsMainBtnBox, .AstvSignsSubtitle, .AstvNavItem, .AstvNavLabel, .AstvNavSelBlk, .AstvGroupTitle, .AstvBtnProfileTitle, .AstvBtnProfileDetail, .AstvBtnProfileTitle, .AstvProfileCenter, .AstvBtnLabel .AstvTitle, .AstvSubtitle, .AstvFeedback *, .AstvFeedbackSubtitle, .material-symbols-outlined, .AstvSpeechCfg *, .AstvSpeechCfg .AstvItemLabel) {
+  letter-spacing: 0.1em !important;
+  word-spacing: 0.3em !important;
+}
+
+[data-astv-charspacing="3"] body *:not(.AssistivePlugin *, .AstvIgnoreStyle, .AstvIgnoreStyle *, .AstvBtnLabel, .AstvBtnIndicators, .AstvBtnIndicator, .AstvNavButton, .AstvSignsTitle, .AstvWinSignsContent, .AstvSignsMainBtnBox, .AstvSignsSubtitle, .AstvNavItem, .AstvNavLabel, .AstvNavSelBlk, .AstvGroupTitle, .AstvBtnProfileTitle, .AstvBtnProfileDetail, .AstvBtnProfileTitle, .AstvProfileCenter, .AstvBtnLabel .AstvTitle, .AstvSubtitle, .AstvFeedback *, .AstvFeedbackSubtitle, .material-symbols-outlined, .AstvSpeechCfg *, .AstvSpeechCfg .AstvItemLabel) {
+  letter-spacing: 0.2em !important;
+  word-spacing: 0.6em !important;
+}
+
+.AstvMagnifyingBlock {
+  display: none;
+}
+
+.AstvMagMsg {
+  display: none;
+  color: #fff;
+  font-size: 24px;
+  background-color: var(--AstvBodyColor);
+  position: relative;
+  z-index: 99;
+  padding: 10px 0px 10px 0px;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 420px;
+}
+
+[data-astv-magnifying] .AstvMagnifyingMask {
+  display: block;
+  top: 0px;
+  left: 0px;
+  width: 0px;
+  height: 0px;
+  position: fixed;
+  z-index: 100001;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+[data-astv-magnifying] .AstvMagnifyingBlock {
+  display: block;
+  top: 80px;
+  left: 80px;
+  width: 500px;
+  height: 500px;
+  position: fixed;
+  _overflow: hidden;
+  clip-path: circle(50% at 50% 50%);
+  z-index: 100002;
+}
+[data-astv-magnifying] .AstvMagnifyingBlock iframe {
+  position: absolute;
+  border: none;
+  max-width: none !important;
+  max-height: none !important;
+  background-color: #ffffff;
+}
+[data-astv-magnifying] .AstvMagnifyingBlocker {
+  display: block;
+  top: 0px;
+  left: 0px;
+  width: 0px;
+  height: 0px;
+  position: fixed;
+  z-index: 100003;
+}
+
+[data-astv-animation] * {
+  animation: none !important;
+  transition: none !important;
+  animation-play-state: paused !important;
+  animation-name: none !important;
+  animation-duration: 0s !important;
+}
+
+[data-astv-cursor=white], [data-astv-cursor=white] * {
+  cursor: url("BigCur_white.5.svg"), auto !important;
+}
+
+[data-astv-cursor=black], [data-astv-cursor=black] * {
+  cursor: url("BigCur_black.12.svg"), auto !important;
+}
+
+[data-astv-cursor=blue], [data-astv-cursor=blue] * {
+  cursor: url("BigCur_blue.3.svg"), auto !important;
+}
+
+[data-astv-cursor=red], [data-astv-cursor=red] * {
+  cursor: url("BigCur_red.3.svg"), auto !important;
+}
+
+.AssistiveLoading {
+  display: inline-block;
+  height: 14.1421356237px;
+  width: 14.1421356237px;
+  bottom: 0px;
+  font-size: 16px !important;
+  color: #555;
+  text-align: center;
+  z-index: 1501;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+@keyframes rotate {
+  from {
+    transform: rotateZ(360deg);
+  }
+  to {
+    transform: rotateZ(0deg);
+  }
+}
+.AssistiveLoading .AssistiveCircle {
+  border: 3px solid transparent !important;
+  border-radius: 50% !important;
+  animation: rotate linear infinite !important;
+  border-top-color: #555 !important;
+  height: 10px;
+  width: 10px;
+  animation-duration: 0.85s !important;
+}
+
+[data-astv-highlight=link] a, [data-astv-highlight=all] a {
+  outline: 2px solid blue !important;
+  outline-offset: 2px;
+  outline-radius: 2px;
+}
+
+[data-astv-highlight=btn] button:not(.AssistivePlugin *, .AstvIgnoreStyle, .AstvIgnoreStyle *, .AstvBtnLabel, .AstvBtnIndicators, .AstvBtnIndicator, .AstvNavButton, .AstvSignsTitle, .AstvWinSignsContent, .AstvSignsMainBtnBox, .AstvSignsSubtitle, .AstvNavItem, .AstvNavLabel, .AstvNavSelBlk, .AstvGroupTitle, .AstvBtnProfileTitle, .AstvBtnProfileDetail, .AstvBtnProfileTitle, .AstvProfileCenter, .AstvBtnLabel .AstvTitle, .AstvSubtitle, .AstvFeedback *, .AstvFeedbackSubtitle, .material-symbols-outlined, .AstvSpeechCfg *, .AstvSpeechCfg .AstvItemLabel), [data-astv-highlight=btn] div[data-toggle=modal], [data-astv-highlight=btn] span[data-toggle=modal], [data-astv-highlight=all] button:not(.AssistivePlugin *, .AstvIgnoreStyle, .AstvIgnoreStyle *, .AstvBtnLabel, .AstvBtnIndicators, .AstvBtnIndicator, .AstvNavButton, .AstvSignsTitle, .AstvWinSignsContent, .AstvSignsMainBtnBox, .AstvSignsSubtitle, .AstvNavItem, .AstvNavLabel, .AstvNavSelBlk, .AstvGroupTitle, .AstvBtnProfileTitle, .AstvBtnProfileDetail, .AstvBtnProfileTitle, .AstvProfileCenter, .AstvBtnLabel .AstvTitle, .AstvSubtitle, .AstvFeedback *, .AstvFeedbackSubtitle, .material-symbols-outlined, .AstvSpeechCfg *, .AstvSpeechCfg .AstvItemLabel), [data-astv-highlight=all] div[data-toggle=modal], [data-astv-highlight=all] span[data-toggle=modal] {
+  outline: 2px solid green !important;
+  outline-offset: 2px;
+  outline-radius: 2px;
+}
+
+[data-astv-highlight=title] h1, [data-astv-highlight=title] h2, [data-astv-highlight=title] h3, [data-astv-highlight=title] h4, [data-astv-highlight=title] h5, [data-astv-highlight=title] h6, [data-astv-highlight=all] h1, [data-astv-highlight=all] h2, [data-astv-highlight=all] h3, [data-astv-highlight=all] h4, [data-astv-highlight=all] h5, [data-astv-highlight=all] h6 {
+  outline: 2px solid #ff7800 !important;
+  outline-offset: 2px;
+  outline-radius: 2px;
+}
+
+.AstvGuide {
+  display: none;
+}
+.AstvGuide .AstvGuidePart {
+  background-color: rgba(0, 0, 0, 0.6666666667);
+  position: fixed;
+  left: 0;
+  width: 100%;
+  top: 0px;
+  height: 100px;
+  z-index: 10000000;
+}
+.AstvGuide .AstvGuideTop {
+  border-bottom: 5px solid rgba(0, 0, 0, 0.8666666667);
+}
+.AstvGuide .AstvGuideBottom {
+  border-top: 5px solid rgba(0, 0, 0, 0.8666666667);
+}
+
+[data-astv-guide] .AstvGuide {
+  display: block;
+}
+
+[data-astv-frame="1"] .AstvGuide {
+  display: none;
+}
+
+.AstvGuideMsgBlock {
+  text-align: center;
+  bottom: 10px;
+  position: absolute;
+  width: 100%;
+  display: none;
+}
+
+.AstvGuideMsg {
+  display: inline-block;
+  background-color: var(--AstvBodyColor);
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 18px !important;
+  font-family: Segoe UI, SF Pro, Helvetica, Verdana, Tahoma, sans-serif, Arial !important;
+  letter-spacing: normal !important;
+  word-spacing: normal !important;
+  border-radius: 8px;
+}
+
+.AstvRuler {
+  display: none;
+  position: fixed;
+  left: 1%;
+  top: -1000px;
+  background-color: black;
+  border: 2px solid yellow;
+  border-left: none;
+  border-right: none;
+  height: 6px;
+  width: 98%;
+  z-index: 10000000;
+  box-sizing: content-box;
+}
+
+[data-astv-ruler] .AstvRuler {
+  display: block;
+}
+
+[data-astv-frame="1"] .AstvRuler {
+  display: none;
+}
+
+[data-astv-voice] .AstvVoicePanel {
+  text-size: 12px;
+}
+
+.AstvKeys {
+  font-size: 16px;
+  background-color: #fff;
+  color: black;
+  padding: 0 16px;
+  text-align: left;
+}
+.AstvKeys h4 {
+  font-size: 22px;
+  color: var(--AstvBodyColor);
+  margin: 20px 0;
+}
+.AstvKeys .AstvKeysGroups {
+  background-color: #fff;
+  color: black;
+}
+.AstvKeys .AstvKeysItem {
+  margin-top: 10px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+.AstvKeys .AstvKeysItem:last-child {
+  border-bottom: none;
+  padding-bottom: 20px;
+}
+.AstvKeys .AstvKeyItemGroup {
+  display: flex;
+  align-items: center;
+}
+.AstvKeys .AstvKeysAll {
+  vertical-align: top;
+  text-align: left;
+  flex-shrink: 0;
+}
+.AstvKeys .AstvKeysKey {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background-color: #eee;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 18px;
+  margin-right: 5px;
+}
+.AstvKeys .AstvKeysPlus {
+  font-size: 10px;
+  display: inline-block;
+  padding: 0 4px 0 0px;
+}
+.AstvKeys .AstvKeyTxt {
+  position: relative;
+  top: 5px;
+  text-align: center;
+  font-size: 18px;
+}
+.AstvKeys .AstvKeyName .AstvKeyTxt {
+  font-size: 14px;
+}
+.AstvKeys .AstvKeysDesc {
+  padding-left: 10px;
+  font-size: 14px;
+  display: inline-block;
+  flex-shrink: 2;
+}
+.AstvKeys .AstvKeysTitle {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.AssistivePlugin[data-astv-keys] .AstvWinCurrent {
+  display: block !important;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.AstvStruct {
+  font-size: 16px;
+  background-color: #fff;
+  color: black;
+  text-align: left;
+}
+.AstvStruct .AstvStructH {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--AstvFocusColor) !important;
+  line-height: 20px !important;
+  font-family: Segoe UI, SF Pro, Helvetica, Verdana, Tahoma, sans-serif, Arial !important;
+  letter-spacing: normal !important;
+  text-align: left !important;
+  word-spacing: normal !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  padding-bottom: 15px !important;
+}
+.AstvStruct ul {
+  margin: 0;
+  padding: 0;
+}
+.AstvStruct li {
+  display: flex;
+  clear: both;
+  padding: 7px 0;
+  margin: 0;
+}
+.AstvStruct li .AstvIcon {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-image: url("IconLink.2.svg");
+  width: 16px;
+  height: 16px;
+  position: relative;
+  top: 3px;
+  margin-right: 10px;
+  font-size: 16px;
+  line-height: 20px !important;
+  font-family: Segoe UI, SF Pro, Helvetica, Verdana, Tahoma, sans-serif, Arial !important;
+  letter-spacing: normal !important;
+  word-spacing: normal !important;
+  text-align: left !important;
+}
+.AstvStruct li button {
+  color: #040304;
+  width: 100%;
+  text-decoration: none;
+  display: block;
+  padding: 0;
+  margin: 0;
+  text-align: left !important;
+  border: none;
+  background-color: #fff;
+  line-height: 20px !important;
+  font-family: Segoe UI, SF Pro, Helvetica, Verdana, Tahoma, sans-serif, Arial !important;
+  letter-spacing: normal !important;
+  word-spacing: normal !important;
+}
+.AstvStruct li button:hover {
+  color: var(--AstvFocusColor) !important;
+  text-decoration: underline;
+}
+.AstvStruct li button:focus {
+  color: var(--AstvFocusColor) !important;
+  outline: 1px solid var(--AstvFocusColor) !important;
+  outline-offset: 2px;
+}
+.AstvStruct li.AstvLevel::before {
+  margin-right: 5px;
+  color: #fff;
+  background-color: #555;
+  border-radius: 4px;
+  display: inline-block;
+  height: 21px;
+  font-size: 16px;
+  padding: 0px 3px;
+  content: "H1";
+}
+.AstvStruct li.AstvLevel .AstvIcon {
+  display: none;
+}
+.AstvStruct li.AstvLevel2 {
+  margin-left: 10px;
+}
+.AstvStruct li.AstvLevel2::before {
+  content: "H2";
+}
+.AstvStruct li.AstvLevel3 {
+  margin-left: 20px;
+}
+.AstvStruct li.AstvLevel3::before {
+  content: "H3";
+}
+.AstvStruct li.AstvLevel4 {
+  margin-left: 30px;
+}
+.AstvStruct li.AstvLevel4::before {
+  content: "H4";
+}
+.AstvStruct li.AstvLevel5 {
+  margin-left: 40px;
+}
+.AstvStruct li.AstvLevel5::before {
+  content: "H5";
+}
+.AstvStruct li.AstvLevel6 {
+  margin-left: 50px;
+}
+.AstvStruct li.AstvLevel6::before {
+  content: "H6";
+}
+.AstvStruct .AstvStructSessions, .AstvStruct .AstvStructTitles {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 15px !important;
+  margin-bottom: 15px !important;
+}
+
+[data-astv-struct-focus] {
+  outline: 4px solid var(--AstvFocusColor) !important;
+  outline-offset: 2px !important;
+}
+
+.AssistivePlugin[data-astv-struct] .AstvWinCurrent {
+  display: block !important;
+  padding: 20px 16px 5px 16px;
+}
+
+.AstvPdf {
+  font-size: 16px;
+  background-color: #fff;
+  color: black;
+  text-align: left;
+}
+.AstvPdf button {
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+}
+.AstvPdf .AstvPdfH {
+  display: flex;
+}
+.AstvPdf .AstvPdfH .AstvPdfHIcon {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-image: url("IconAI.1.svg");
+  width: 21px;
+  height: 21px;
+  position: relative;
+  top: 0px;
+  margin-right: 10px;
+  font-size: 16px;
+  line-height: 20px !important;
+  font-family: Segoe UI, SF Pro, Helvetica, Verdana, Tahoma, sans-serif, Arial !important;
+  letter-spacing: normal !important;
+  word-spacing: normal !important;
+  text-align: left !important;
+}
+.AstvPdf .AstvPdfH .AstvPdfHLabel {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--AstvFocusColor) !important;
+  line-height: 20px !important;
+  font-family: Segoe UI, SF Pro, Helvetica, Verdana, Tahoma, sans-serif, Arial !important;
+  letter-spacing: normal !important;
+  text-align: left !important;
+  word-spacing: normal !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  padding-bottom: 15px !important;
+}
+.AstvPdf .AstvPdfNoEntries .AstvPdfNoEntriesTitle {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.AstvPdf .AstvPdfNoEntries .AstvPdfNoEntriesSubtitle {
+  text-align: center;
+  margin-top: 10px;
+}
+.AstvPdf ul {
+  margin: 0;
+  padding: 0;
+}
+.AstvPdf li {
+  display: flex;
+  clear: both;
+  padding: 14px 0;
+  margin: 0;
+  border-bottom: 1px solid #F2F2F2;
+  cursor: pointer;
+}
+.AstvPdf li:focus {
+  outline: 2px solid var(--AstvFocusColor);
+}
+.AstvPdf li .AstvIcon {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-image: url("IconPdf.1.svg");
+  width: 21px;
+  height: 21px;
+  min-width: 21px;
+  position: relative;
+  top: 0px;
+  margin-right: 10px;
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 20px !important;
+  font-family: Segoe UI, SF Pro, Helvetica, Verdana, Tahoma, sans-serif, Arial !important;
+  letter-spacing: normal !important;
+  word-spacing: normal !important;
+  text-align: left !important;
+}
+.AstvPdf li .AstvLoading {
+  float: right;
+  margin-top: 10px;
+  margin-right: 5px;
+}
+.AstvPdf li .AstvLoading span {
+  margin-right: 8px;
+  margin-left: 10px;
+  font-size: 14px;
+}
+.AstvPdf li .AstvOpenButton, .AstvPdf li .AstvRetryButton {
+  float: right;
+  background-color: #ffffff;
+  border: 1px solid #D3D5DC;
+  max-height: 50px;
+}
+.AstvPdf li .AstvLabel {
+  display: block;
+  padding: 0;
+  padding-bottom: 2px;
+  margin: 0;
+  margin-left: 4px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  flex: 1px;
+}
+.AstvPdf li .AstvLabel .AstvTitle {
+  color: #040304;
+  width: 100%;
+  text-decoration: none;
+  display: block;
+  padding: 0;
+  margin: 0;
+  text-align: left !important;
+  border: none;
+  line-height: 20px !important;
+  font-family: Segoe UI, SF Pro, Helvetica, Verdana, Tahoma, sans-serif, Arial !important;
+  letter-spacing: normal !important;
+  word-spacing: normal !important;
+  max-height: 42px;
+  overflow: hidden;
+}
+.AstvPdf li .AstvLabel .AstvSubtitle {
+  font-size: 14px;
+  margin-top: 4px;
+}
+.AstvPdf li .AstvLabel .AstvErrorLabel {
+  color: red;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 7px;
+}
+.AstvPdf .AstvPdfPrompt {
+  position: absolute;
+  background-color: #EEF8FE;
+  width: 314px;
+  border-radius: 12px;
+  bottom: 65px;
+  padding: 7px 15px 0px 18px;
+}
+.AstvPdf .AstvPdfPrompt .AstvPdfPromptTitle {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 5px 0px 5px 0px;
+}
+.AstvPdf .AstvPdfPrompt .AstvPdfPromptSubtitle {
+  font-size: 14px;
+  margin-bottom: 13px;
+}
+.AstvPdf .AstvPdfPrompt .AstvPdfPromptConfirmButton {
+  width: 100%;
+  background-color: #1756E8;
+  color: white;
+  border: 0px;
+  margin-bottom: 13px;
+}
+.AstvPdf .AstvPdfPrompt .AstvPdfPromptCancelButton {
+  width: 100%;
+  background-color: #EEF8FE;
+  border: 1px solid #D3D5DC;
+  margin-bottom: 15px;
+}
+
+[data-astv-pdf-focus] {
+  outline: 4px solid var(--AstvFocusColor) !important;
+  outline-offset: 2px !important;
+}
+
+.AssistivePlugin[data-astv-pdf] .AstvWinCurrent {
+  display: block !important;
+  padding: 20px 16px 5px 16px;
+}
+
+.AstvProfile {
+  font-size: 16px;
+  background-color: #fff;
+  color: black;
+}
+.AstvProfile h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 10px 0 20px 0;
+}
+.AstvProfile ul {
+  padding: 0;
+  margin: 0;
+}
+.AstvProfile .AstvProfileMain {
+  display: flex;
+}
+.AstvProfile .AstvProfileMain:last-child {
+  border-bottom: none;
+}
+.AstvProfile .AstvProfileMain .AstvColLeft {
+  flex-grow: 1;
+}
+.AstvProfile .AstvProfileMain .AstvColRight {
+  flex-shrink: 0;
+  padding-top: 4px;
+}
+.AstvProfile .AstvProfileMain .AstvTitle {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  cursor: pointer;
+}
+.AstvProfile .AstvProfileMain .AstvSubtitle {
+  font-size: 14px;
+}
+.AstvProfile .AstvProfileDetail {
+  display: none;
+  color: #111;
+  font-size: 14px;
+  margin-top: 10px;
+  color: var(--AstvBodyColor);
+}
+.AstvProfile li {
+  border-bottom: 1px solid #f2f2f2;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+}
+.AstvProfile li.AstvToggleSel .AstvTitle {
+  color: var(--AstvBodyColor);
+}
+.AstvProfile li.AstvToggleSel .AstvProfileDetail {
+  display: block;
+}
+.AstvProfile .AstvProfileMore {
+  background-color: rgba(var(--AstvBodyColorRgb), 0.1);
+  border-radius: 8px;
+  display: flex;
+  margin: 20px 0px 0px 0px;
+  text-align: left !important;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0);
+}
+.AstvProfile .AstvProfileMore .AstvProfileMoreLeft {
+  -webkit-mask-image: url("IconProfile.2.svg") !important;
+  mask-image: url("IconProfile.2.svg") !important;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: auto;
+  mask-size: auto;
+  background-color: var(--AstvBodyColor);
+  width: 32px;
+  margin-left: 16px;
+  line-height: 18px;
+}
+.AstvProfile .AstvProfileMore .AstvProfileMoreCenter {
+  margin-left: 15px;
+  color: #2C2C2C;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  width: 250px;
+}
+.AstvProfile .AstvProfileMore .AstvProfileMoreCenter .AstvBtnProfileDetail {
+  font-size: 14px;
+}
+.AstvProfile .AstvProfileMore .AstvProfileMoreRight {
+  background-image: url("IconArrowRight.2.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 12px;
+  margin-right: 20px;
+}
+.AstvProfile .AstvProfileMore:hover {
+  background-color: rgba(var(--AstvBodyColorRgb), 0.15);
+  border: 1px solid var(--AstvBodyColor);
+}
+.AstvProfile .AstvProfileMore:hover .AstvProfileCenter {
+  color: back;
+}
+
+.AssistivePlugin[data-astv-profile] .AstvWinCurrent {
+  display: block !important;
+  padding: 5px 24px;
+}
+
+.AstvProfileHelp {
+  font-size: 16px;
+  background-color: #fff;
+  color: #000;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.AstvProfileHelp p {
+  color: #000;
+  margin: 10px 0;
+}
+.AstvProfileHelp h2 {
+  margin-top: 20px;
+  margin-bottom: 0px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.AssistivePlugin[data-astv-profilehelp] .AstvWinCurrent {
+  display: block !important;
+  padding: 5px 24px;
+}
+
+.AstvAbout {
+  font-size: 16px;
+  background-color: #fff;
+  color: black;
+  text-align: left;
+}
+.AstvAbout::-webkit-scrollbar {
+  width: 4px;
+}
+.AstvAbout::-webkit-scrollbar-track {
+  background: transparent;
+}
+.AstvAbout::-webkit-scrollbar-thumb {
+  background-color: rgba(155, 155, 155, 0.5);
+  border-radius: 2px;
+  border: transparent;
+}
+.AssistivePlugin[data-astv-about] .AstvAbout {
+  display: block;
+}
+.AstvAbout .AstvAboutImg {
+  width: 326px;
+  height: 53px;
+  margin: 20px 0;
+  background-image: url("AssistiveLogoAbout.2.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.AstvAbout p {
+  font-size: 16px;
+  color: black;
+  margin-top: 20px;
+}
+.AstvAbout li {
+  list-style-type: disc;
+  margin: 5px 5px 0 20px;
+}
+.AstvAbout .AstvVerNum {
+  margin-top: 20px;
+  user-select: all;
+  cursor: default;
+}
+
+.AssistivePlugin[data-astv-about] .AstvWinCurrent {
+  display: block !important;
+  padding: 5px 24px;
+}
+
+.AstvFeedback {
+  font-size: 16px;
+  text-align: left;
+  background-color: white;
+  _margin: 10px 0;
+  color: black;
+  border-radius: 6px;
+}
+.AstvFeedback h2 {
+  margin: 0;
+  color: #222;
+  margin-bottom: 20px;
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 600;
+}
+.AstvFeedback label {
+  position: relative;
+  display: block;
+  height: auto !important;
+  margin-bottom: 0 !important;
+  font-size: 1em !important;
+}
+.AstvFeedback label span {
+  display: block;
+  padding-bottom: 4px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.AstvFeedback select, .AstvFeedback input, .AstvFeedback textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #d3d5dc;
+  outline: none;
+  font-size: 16px;
+  font-weight: 600;
+}
+.AstvFeedback select:focus, .AstvFeedback input:focus, .AstvFeedback textarea:focus {
+  border: 1px solid #000;
+}
+.AstvFeedback textarea::-webkit-scrollbar {
+  width: 4px;
+}
+.AstvFeedback textarea::-webkit-scrollbar-track {
+  background: transparent;
+}
+.AstvFeedback textarea::-webkit-scrollbar-thumb {
+  background-color: rgba(155, 155, 155, 0.5);
+  border-radius: 2px;
+  border: transparent;
+}
+.AstvFeedback .AstvInputWithIcon input {
+  padding-left: 34px;
+}
+.AstvFeedback .AstvInputIcon {
+  display: inline-block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin-top: 12px;
+  margin-left: 9px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.AstvFeedback .AstvInputIconName {
+  background-image: url("IconUser.1.svg");
+}
+.AstvFeedback .AstvInputIconPhone {
+  background-image: url("IconPhone.2.svg");
+}
+.AstvFeedback .AstvInputIconEmail {
+  background-image: url("IconEmail.1.svg");
+}
+.AstvFeedback .AstvInputError input, .AstvFeedback .AstvInputError textarea, .AstvFeedback .AstvInputError select {
+  border-color: red !important;
+}
+.AstvFeedback .AstvInputError span {
+  color: red;
+}
+.AstvFeedback .AstvInputError .AstvInputIcon {
+  background-image: url("IconWarning.1.svg");
+}
+.AstvFeedback .AstvFdbBlock {
+  margin-top: 15px;
+}
+.AstvFeedback .AstvFdbBottom {
+  text-align: center;
+  margin: 10px 0 20px 0;
+}
+.AstvFeedback .AstvSendFdbBtn {
+  width: auto !important;
+}
+.AstvFeedback .AstvFdbSubjectLabel {
+  display: block;
+  font-weight: bold;
+}
+.AstvFeedback .AstvFdbSubject input {
+  width: auto;
+  display: inline;
+}
+.AstvFeedback .AstvFdbSubject span {
+  width: auto;
+  display: inline;
+}
+.AstvFeedback .AstvFdbSubject label {
+  width: 100%;
+  display: block;
+}
+.AstvFeedback .AstvPrivacyBlock {
+  margin: 0px 0 25px 0;
+  font-size: 16px;
+}
+.AstvFeedback .AstvPrivacyBlock .AstvPrivacyLink {
+  color: #000;
+  border-bottom: 1px solid #000;
+  padding-bottom: 2px;
+}
+.AstvFeedback .AstvPrivacyBlock .AstvPrivacyLink:hover {
+  color: var(--AstvBodyColor);
+  border-color: var(--AstvBodyColor);
+  text-decoration: none !important;
+}
+
+.AstvSimpleFeedback .AstvFdbName {
+  display: none;
+}
+.AstvSimpleFeedback .AstvFdbEmail {
+  display: none;
+}
+.AstvSimpleFeedback .AstvFdbPhone {
+  display: none;
+}
+
+.AssistivePlugin[data-astv-feedback] .AstvWinCurrent {
+  display: block !important;
+  padding: 16px;
+}
+
+.AstvFeedbackSent {
+  font-size: 16px;
+  background-color: #fff;
+  color: black;
+  padding: 5px 0px;
+  padding-top: 100px;
+  text-align: center !important;
+  display: none;
+}
+.AstvFeedbackSent h2 {
+  color: black;
+  padding: 5px 0;
+  margin: 0;
+  font-size: 24px;
+  text-align: center;
+  font-weight: 600;
+}
+.AstvFeedbackSent p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #111;
+  padding: 5px 0;
+  margin: 0;
+  text-align: center;
+}
+.AssistivePlugin[data-astv-feedbacksent] .AstvFeedbackSent {
+  display: block;
+}
+.AstvFeedbackSent button {
+  margin-top: 20px !important;
+  width: auto !important;
+}
+.AstvFeedbackSent button .AstvBtnIcon {
+  font-size: 14px;
+  line-height: 120%;
+  margin-left: 10px;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  top: 3px;
+  -webkit-mask-image: url("IconArrowRight.2.svg") !important;
+  mask-image: url("IconArrowRight.2.svg") !important;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  background-color: white;
+}
+.AstvFeedbackSent button span {
+  color: white;
+}
+
+.AssistivePlugin[data-astv-feedbacksent] .AstvWinCurrent {
+  display: block !important;
+}
+
+.AstvWin .AstvWinHelp {
+  padding: 0 16px;
+  text-align: left !important;
+}
+.AstvWin .AstvWinHelp .AstvStatementPanel {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 16px;
+  padding: 16px;
+}
+.AstvWin .AstvWinHelp .AstvStatementPanel .AstvTitleBlock {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+.AstvWin .AstvWinHelp .AstvStatementPanel .AstvTitleBlock .AstvTitle {
+  font-size: 14px;
+  color: #2c2c2c;
+  margin-left: 8px;
+}
+.AstvWin .AstvWinHelp .AstvStatementPanel .AstvTitleBlock .AstvIcon {
+  width: 32px;
+  height: 32px;
+  -webkit-mask-image: url("IconProfile.2.svg") !important;
+  mask-image: url("IconProfile.2.svg") !important;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  background-color: var(--AstvBodyColor);
+}
+.AstvWin .AstvWinHelp .AstvStatementPanel .AstvLinkBlock {
+  font-size: 14px;
+  line-height: 120%;
+  text-align: center !important;
+}
+.AstvWin .AstvWinHelp .AstvStatementPanel .AstvLinkBlock .AstvStatementBtn {
+  color: var(--AstvBodyColor);
+  display: inline-block;
+  background-color: white;
+  border: none;
+  font-size: 14px;
+  line-height: 120% !important;
+  cursor: pointer;
+  width: auto !important;
+}
+.AstvWin .AstvWinHelp .AstvStatementPanel .AstvLinkBlock .AstvStatementBtn:hover {
+  text-decoration: underline;
+}
+.AstvWin .AstvWinHelp .AstvStatementPanel .AstvLinkBlock .AstvIcon {
+  font-size: 14px;
+  line-height: 120%;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  top: 3px;
+  -webkit-mask-image: url("IconArrowRight.2.svg") !important;
+  mask-image: url("IconArrowRight.2.svg") !important;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  background-color: var(--AstvBodyColor);
+  margin-left: 20px !important;
+}
+.AstvWin .AstvWinHelp .AstvMenuList {
+  margin-top: 16px;
+}
+.AstvWin .AstvWinHelp .AstvMenuList .AstvMenuItem {
+  background-color: white;
+  border: none;
+  padding: 0px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  width: 100% !important;
+  border-radius: 0 !important;
+}
+.AstvWin .AstvWinHelp .AstvMenuList .AstvMenuItem:last-child {
+  border-bottom: none;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+.AstvWin .AstvWinHelp .AstvMenuList .AstvMenuItem .AstvMenuTitle {
+  color: #040304;
+  font-weight: 600;
+  padding-bottom: 4px;
+}
+.AstvWin .AstvWinHelp .AstvMenuList .AstvMenuItem .AstvMenuSubtitle {
+  color: #6B6B6B;
+  font-size: 14px;
+}
+.AssistiveIsTouch .AstvWin .AstvWinHelp .AstvMenuList .AstvMenuItem.AstvBtnKeys {
+  display: none;
+}
+.AstvWin .AstvWinHelp .AstvMenuList button.AstvMenuItem {
+  cursor: pointer;
+}
+.AstvWin .AstvWinHelp .AstvMenuList button.AstvMenuItem:hover .AstvMenuTitle {
+  color: var(--AstvBodyColor);
+}
+.AstvWin .AstvWinHelp .AstvMenuList .AstvSurveyBlock .AstvBtnSurvey {
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 48px !important;
+  height: 48px;
+  margin: 5px;
+  border: 1px solid #fff;
+  background-color: #fff;
+  cursor: pointer;
+  border-radius: 6px;
+}
+.AstvWin .AstvWinHelp .AstvMenuList .AstvSurveyBlock .AstvBtnSurvey .AstvBtnIcon {
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  margin-left: 7px;
+  -webkit-mask-image: url("IconSurveyUp.2.svg") !important;
+  mask-image: url("IconSurveyUp.2.svg") !important;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: 32px;
+  mask-size: 32px;
+  background-color: #555;
+}
+.AstvWin .AstvWinHelp .AstvMenuList .AstvSurveyBlock .AstvBtnSurvey:hover {
+  border: 1px solid #ddd;
+  background-color: #eee;
+}
+.AstvWin .AstvWinHelp .AstvMenuList .AstvSurveyBlock .AstvBtnSurvey:active {
+  border: 1px solid #aaa;
+  background-color: #ddd;
+}
+.AstvWin .AstvWinHelp .AstvMenuList .AstvSurveyBlock .AstvBtnSurvey:disabled {
+  opacity: 30%;
+  border: 1px solid #fff;
+  background-color: #fff;
+  cursor: default;
+}
+.AstvWin .AstvWinHelp .AstvMenuList .AstvSurveyBlock .AstvBtnSurvey.AstvBtnSelected {
+  opacity: inherit;
+}
+.AstvWin .AstvWinHelp .AstvMenuList .AstvSurveyBlock .AstvBtnSurveyUp.AstvBtnSelected {
+  opacity: inherit;
+  border-color: var(--AstvBodyColor);
+  background-color: var(--AstvBodyColor);
+}
+.AstvWin .AstvWinHelp .AstvMenuList .AstvSurveyBlock .AstvBtnSurveyUp.AstvBtnSelected .AstvBtnIcon {
+  background-color: #fff;
+}
+.AstvWin .AstvWinHelp .AstvMenuList .AstvSurveyBlock .AstvBtnSurveyDown .AstvBtnIcon {
+  -webkit-mask-image: url("IconSurveyDown.2.svg") !important;
+  mask-image: url("IconSurveyDown.2.svg") !important;
+}
+.AstvWin .AstvWinHelp .AstvMenuList .AstvSurveyBlock .AstvBtnSurveyDown.AstvBtnSelected {
+  opacity: inherit;
+  border-color: #ddd;
+  background-color: #ddd;
+}
+.AstvWin .AstvWinHelp .AstvMenuList .AstvSurveyBlock .AstvBtnSurveyDown.AstvBtnSelected .AstvBtnIcon {
+  background-color: #000;
+}
+.AstvWin .AstvWinHelp .AstvMenuList .AstvSurveyBlock .AstvSurveyDoneMsg {
+  display: none;
+  color: #111;
+  position: relative;
+  top: -11px;
+  margin-left: 10px;
+}
+.AstvWin .AstvWinHelp .AstvMenuList .AstvSurveyBlock .AstvSurveyQuestion {
+  display: none;
+  color: #040304;
+  padding-bottom: 4px;
+  margin-top: 15px;
+}
+.AstvWin .AstvWinHelp .AstvMenuList .AstvSurveyBlock .AstvSurveyQuestionLink {
+  display: none;
+  color: var(--AstvBodyColor);
+  background-color: #fff;
+  text-decoration: none;
+  border: none;
+  border-bottom: 1px solid var(--AstvBodyColor);
+  border-radius: 0 !important;
+  padding-bottom: 2px;
+  cursor: pointer;
+  padding: 0;
+  width: auto !important;
+}
+.AstvWin .AstvWinHelp .AstvMenuList .AstvSurveyBlock .AstvSurveyQuestionLink:hover {
+  filter: brightness(110%);
+}
+.AstvWin .AstvWinHelp .AstvMenuList .AstvSurveyBlock.AstvSurveyDoneDownNow .AstvSurveyQuestion {
+  display: block;
+}
+.AstvWin .AstvWinHelp .AstvMenuList .AstvSurveyBlock.AstvSurveyDoneDownNow .AstvSurveyQuestionLink {
+  display: block;
+}
+.AstvWin .AstvWinHelp .AstvMenuList .AstvSurveyBlock.AstvSurveyDone .AstvSurveyDoneMsg {
+  display: inline-block;
+}
+
+.AstvWin.AstvSelHelp .AstvWinHelp {
+  display: block;
+}
+
+.AstvIsWL .AstvWinHelp .AstvBtnAbout {
+  display: none;
+}
+
+.AstvWin .AstvWinSigns {
+  text-align: center !important;
+  background-color: var(--AstvBodyColor);
+}
+.AstvWin .AstvWinSigns .AstvWinSignsContent {
+  text-align: center !important;
+}
+.AstvWin .AstvWinSigns .AstvSignsTitle {
+  color: white;
+  font-weight: 600;
+  margin-top: 96px;
+  margin-bottom: 8px;
+  font-size: 24px;
+  text-align: center;
+}
+.AstvWin .AstvWinSigns .AstvSignsSubtitle {
+  color: white;
+  font-size: 14px;
+  text-align: center;
+}
+.AstvWin .AstvWinSigns .AstvSignsImg {
+  display: inline-block;
+  cursor: pointer;
+  background-image: url("SignsCall.4.jpg");
+  background-position: center;
+  width: 220px;
+  height: 220px;
+  border-radius: 110px;
+  margin: 24px 0;
+  background-size: cover;
+}
+.AstvWin .AstvWinSigns .AstvSignsMainBtnBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+.AstvWin .AstvWinSigns .AstvSignsMainBtnBox .AstvSignsMainBtn {
+  border: none;
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 16px;
+  gap: 8px;
+  background: white;
+  border-radius: 8px;
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+  cursor: pointer;
+}
+.AstvWin .AstvWinSigns .AstvSignsMainBtnBox .AstvSignsMainBtn span {
+  font-style: normal;
+  font-weight: 600;
+  color: var(--AstvBodyColor);
+}
+.AstvWin .AstvWinSigns .AstvSignsMainBtnBox .AstvSignsMainBtn .AstvRightIcon {
+  width: 22px;
+  height: 22px;
+  -webkit-mask-image: url("IconArrowRight.2.svg") !important;
+  mask-image: url("IconArrowRight.2.svg") !important;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: 16px;
+  mask-size: 16px;
+  background-color: var(--AstvBodyColor);
+  width: 26px;
+  margin-left: 12px;
+  line-height: 18px;
+}
+
+.AstvWin.AstvSelSigns .AstvWinSigns {
+  display: block;
+}
+
+.AstvWin .AstvWinMain {
+  background-color: #f7f7f7;
+}
+.AstvWin .AstvWinMain .AstvProfileSel {
+  background-color: white;
+  border-radius: 8px;
+  display: flex;
+  margin: 16px 15px;
+  text-align: left !important;
+  cursor: pointer;
+  border: 1px solid #D3D5DC;
+  width: 93% !important;
+}
+.AstvWin .AstvWinMain .AstvProfileSel .AstvProfileLeft {
+  -webkit-mask-image: url("IconProfile.2.svg") !important;
+  mask-image: url("IconProfile.2.svg") !important;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: auto;
+  mask-size: auto;
+  background-color: var(--AstvBodyColor);
+  width: 32px;
+  margin-left: 8px;
+  line-height: 18px;
+  display: inline-block;
+  height: 32px;
+  position: relative;
+  top: 19px;
+}
+.AstvWin .AstvWinMain .AstvProfileSel .AstvProfileCenter {
+  margin-left: 8px;
+  color: #2C2C2C;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  width: 250px;
+}
+.AstvWin .AstvWinMain .AstvProfileSel .AstvProfileCenter .AstvBtnProfileTitle {
+  font-size: 16px;
+  font-weight: 600;
+}
+.AstvWin .AstvWinMain .AstvProfileSel .AstvProfileCenter .AstvBtnProfileDetail {
+  font-size: 14px;
+}
+.AstvWin .AstvWinMain .AstvProfileSel .AstvProfileRight {
+  background-image: url("IconArrowRight.2.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 12px;
+  margin-right: 20px;
+  display: inline-block;
+  height: 32px;
+  position: relative;
+  top: 19px;
+}
+.AstvWin .AstvWinMain .AstvProfileSel:hover {
+  border-color: #aaa;
+  background-color: #F2F3F7;
+}
+.AstvWin .AstvWinMain .AstvProfileSel:hover .AstvProfileCenter {
+  color: back;
+}
+.AstvWin .AstvWinMain .AstvProfileSel:focus {
+  outline: 2px solid var(--AstvBodyColor);
+}
+.AssistivePlugin[data-astv-show-view] .AstvWin .AstvWinMain .AstvButtons {
+  display: none;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvGroupTitle {
+  color: #111;
+  font-size: 15px;
+  margin: 22px 15px 0px 15px;
+  padding: 16px 0 16px 0;
+  font-weight: 600;
+  border-top: 1px solid #D3D5DC;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvGroupTitle:first-child {
+  border: none;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup {
+  text-align: center;
+  margin: 5px 15px;
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup .AstvBtnFake {
+  visibility: hidden;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button {
+  flex-grow: 1;
+  text-align: center;
+  background-color: white;
+  border: 1px solid #D3D5DC;
+  border-radius: 8px;
+  padding: 0;
+  margin: 0;
+  min-width: 101px;
+  width: 101px !important;
+  min-height: 96px;
+  max-height: 96px;
+  height: 96px;
+  line-height: 12px;
+  cursor: pointer;
+  outline: none;
+  outline-offset: 0;
+  font-weight: 600;
+  position: relative;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvUnavailable, .AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvFeatureHide {
+  display: none !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button .AstvBtnTop {
+  height: 32px;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button .AstvBtnIcon {
+  height: 32px;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  background-color: #6B7284;
+  margin-top: 5px;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button .AstvBtnTip {
+  visibility: hidden;
+  transition: 0s all;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 16px;
+  width: 16px;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-image: url("IconTip.1.svg") !important;
+  mask-image: url("IconTip.1.svg") !important;
+  background-color: #666;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 1;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button .AstvBtnChecked {
+  display: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 24px;
+  width: 24px;
+  transition: 0s all;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-image: url("IconChecked.1.svg") !important;
+  mask-image: url("IconChecked.1.svg") !important;
+  background-color: var(--AstvBodyColor);
+  position: absolute;
+  top: 1px;
+  right: 1px;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button .AstvBtnLabel {
+  color: #000;
+  height: 50px;
+  vertical-align: middle;
+  font-size: 14px;
+  text-align: center;
+  line-height: 16px;
+  font-weight: 500;
+  padding: 0 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button .AstvBtnIndicators {
+  display: block;
+  position: relative;
+  padding: 0;
+  line-height: 3px;
+  text-align: center;
+  top: -7px;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button .AstvBtnIndicators .AstvBtnIndicator {
+  background-color: #bbb;
+  display: inline-block;
+  width: 13px;
+  height: 3px;
+  border-radius: 2px;
+  margin: 0 1px;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button .AstvBtnIndicators .AstvBtnIndicator.AstvActive {
+  background-color: var(--AstvBodyColor);
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button .AstvBtnIndicators .AstvBtnIndicator.AstvLevelHide {
+  display: none;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button .AstvBtnToggle .AstvBtnLabel {
+  padding-bottom: 0;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button:hover {
+  background-color: #F2F3F7;
+  border-color: #aaa;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button:hover .AstvBtnIcon {
+  background-color: #000;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button:hover .AstvBtnTip {
+  transition-delay: 0.5s;
+  visibility: visible;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button:active {
+  background-color: #D3D5DC;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button:active .AstvBtnIcon {
+  background-color: #111;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button:active .AstvBtnIndicator.AstvActive {
+  background-color: var(--AstvBodyColor);
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvActive {
+  background-color: rgba(var(--AstvBodyColorRgb), 0.1);
+  border: 1px solid black !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvActive .AstvBtnIcon {
+  background-color: var(--AstvBodyColor);
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvActive .AstvBtnLabel {
+  color: var(--AstvBodyColor);
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvActive .AstvBtnIndicators {
+  top: 0px;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvActive .AstvBtnChecked {
+  display: block;
+  transition-delay: 0.5s;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvActive.AstvBtnToggle .AstvBtnLabel {
+  height: 32px;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button:focus-visible {
+  outline: 2px solid var(--AstvBodyColor) !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_textsize .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtnTextSize.3.svg") !important;
+  mask-image: url("IconBtnTextSize.3.svg") !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_align .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtnAlign.2.svg") !important;
+  mask-image: url("IconBtnAlign.2.svg") !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_align.AstvLevel_left .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtnAlign_left.2.svg") !important;
+  mask-image: url("IconBtnAlign_left.2.svg") !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_align.AstvLevel_justify .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtnAlign_justify.2.svg") !important;
+  mask-image: url("IconBtnAlign_justify.2.svg") !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_align.AstvLevel_right .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtnAlign_right.2.svg") !important;
+  mask-image: url("IconBtnAlign_right.2.svg") !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_linespacing .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtn_linespacing.1.svg") !important;
+  mask-image: url("IconBtn_linespacing.1.svg") !important;
+  height: 26px;
+  margin-bottom: 3px;
+  margin-top: 8px;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_charspacing .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtn_charspacing.1.svg") !important;
+  mask-image: url("IconBtn_charspacing.1.svg") !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_focus .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtnFocus.2.svg") !important;
+  mask-image: url("IconBtnFocus.2.svg") !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_smartcontrast .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtnSmartContrast.1.svg") !important;
+  mask-image: url("IconBtnSmartContrast.1.svg") !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_contrast .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtnContrast.6.svg") !important;
+  mask-image: url("IconBtnContrast.6.svg") !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_colors .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtnColors.1.svg") !important;
+  mask-image: url("IconBtnColors.1.svg") !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_saturation .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtnSaturation.3.svg") !important;
+  mask-image: url("IconBtnSaturation.3.svg") !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_voice .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtnVoice.1.svg") !important;
+  mask-image: url("IconBtnVoice.1.svg") !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_animation .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtnAnimation.2.svg") !important;
+  mask-image: url("IconBtnAnimation.2.svg") !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_sound .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtnSound.2.svg") !important;
+  mask-image: url("IconBtnSound.2.svg") !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_image .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtnImage.2.svg") !important;
+  mask-image: url("IconBtnImage.2.svg") !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_pdf .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtnPdf.1.svg") !important;
+  mask-image: url("IconBtnPdf.1.svg") !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_readaloud .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtnRead.3.svg") !important;
+  mask-image: url("IconBtnRead.3.svg") !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_vlibras .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtnVLibras.1.svg") !important;
+  mask-image: url("IconBtnVLibras.1.svg") !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_struct .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtnStruct.2.svg") !important;
+  mask-image: url("IconBtnStruct.2.svg") !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_magnifying .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtnMagnifying.2.svg") !important;
+  mask-image: url("IconBtnMagnifying.2.svg") !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_guide .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtn_guide.1.svg") !important;
+  mask-image: url("IconBtn_guide.1.svg") !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_ruler .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtn_ruler.1.svg") !important;
+  mask-image: url("IconBtn_ruler.1.svg") !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_cursor .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtnCursor.9.svg") !important;
+  mask-image: url("IconBtnCursor.9.svg") !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_font .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtn_font_sansserif.6.svg") !important;
+  mask-image: url("IconBtn_font_sansserif.6.svg") !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_font.AstvLevel_dyslexic .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtn_font_dyslexic.3.svg") !important;
+  mask-image: url("IconBtn_font_dyslexic.3.svg") !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_font.AstvLevel_serif .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtn_font_serif.4.svg") !important;
+  mask-image: url("IconBtn_font_serif.4.svg") !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_tooltips .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtnTooltips.4.svg") !important;
+  mask-image: url("IconBtnTooltips.4.svg") !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_highlight .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtnHighlight.8.svg") !important;
+  mask-image: url("IconBtnHighlight.8.svg") !important;
+}
+
+.AstvWin.AstvSelMain .AstvWinMain {
+  display: block;
+}
+
+.AstvWin .AstvWinMain {
+  background-color: #f7f7f7;
+}
+.AstvWin .AstvWinMain .AstvProfileSel {
+  background-color: white;
+  border-radius: 8px;
+  display: flex;
+  margin: 16px 15px;
+  text-align: left !important;
+  cursor: pointer;
+  border: 1px solid #D3D5DC;
+  width: 93% !important;
+}
+.AstvWin .AstvWinMain .AstvProfileSel .AstvProfileLeft {
+  -webkit-mask-image: url("IconProfile.2.svg") !important;
+  mask-image: url("IconProfile.2.svg") !important;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: auto;
+  mask-size: auto;
+  background-color: var(--AstvBodyColor);
+  width: 32px;
+  margin-left: 8px;
+  line-height: 18px;
+  display: inline-block;
+  height: 32px;
+  position: relative;
+  top: 19px;
+}
+.AstvWin .AstvWinMain .AstvProfileSel .AstvProfileCenter {
+  margin-left: 8px;
+  color: #2C2C2C;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  width: 250px;
+}
+.AstvWin .AstvWinMain .AstvProfileSel .AstvProfileCenter .AstvBtnProfileTitle {
+  font-size: 16px;
+  font-weight: 600;
+}
+.AstvWin .AstvWinMain .AstvProfileSel .AstvProfileCenter .AstvBtnProfileDetail {
+  font-size: 14px;
+}
+.AstvWin .AstvWinMain .AstvProfileSel .AstvProfileRight {
+  background-image: url("IconArrowRight.2.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 12px;
+  margin-right: 20px;
+  display: inline-block;
+  height: 32px;
+  position: relative;
+  top: 19px;
+}
+.AstvWin .AstvWinMain .AstvProfileSel:hover {
+  border-color: #aaa;
+  background-color: #F2F3F7;
+}
+.AstvWin .AstvWinMain .AstvProfileSel:hover .AstvProfileCenter {
+  color: back;
+}
+.AstvWin .AstvWinMain .AstvProfileSel:focus {
+  outline: 2px solid var(--AstvBodyColor);
+}
+.AssistivePlugin[data-astv-show-view] .AstvWin .AstvWinMain .AstvButtons {
+  display: none;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvGroupTitle {
+  color: #111;
+  font-size: 15px;
+  margin: 22px 15px 0px 15px;
+  padding: 16px 0 16px 0;
+  font-weight: 600;
+  border-top: 1px solid #D3D5DC;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvGroupTitle:first-child {
+  border: none;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup {
+  text-align: center;
+  margin: 5px 15px;
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup .AstvBtnFake {
+  visibility: hidden;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button {
+  flex-grow: 1;
+  text-align: center;
+  background-color: white;
+  border: 1px solid #D3D5DC;
+  border-radius: 8px;
+  padding: 0;
+  margin: 0;
+  min-width: 101px;
+  width: 101px !important;
+  min-height: 96px;
+  max-height: 96px;
+  height: 96px;
+  line-height: 12px;
+  cursor: pointer;
+  outline: none;
+  outline-offset: 0;
+  font-weight: 600;
+  position: relative;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvUnavailable, .AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvFeatureHide {
+  display: none !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button .AstvBtnTop {
+  height: 32px;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button .AstvBtnIcon {
+  height: 32px;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  background-color: #6B7284;
+  margin-top: 5px;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button .AstvBtnTip {
+  visibility: hidden;
+  transition: 0s all;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 16px;
+  width: 16px;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-image: url("IconTip.1.svg") !important;
+  mask-image: url("IconTip.1.svg") !important;
+  background-color: #666;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 1;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button .AstvBtnChecked {
+  display: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 24px;
+  width: 24px;
+  transition: 0s all;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-image: url("IconChecked.1.svg") !important;
+  mask-image: url("IconChecked.1.svg") !important;
+  background-color: var(--AstvBodyColor);
+  position: absolute;
+  top: 1px;
+  right: 1px;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button .AstvBtnLabel {
+  color: #000;
+  height: 50px;
+  vertical-align: middle;
+  font-size: 14px;
+  text-align: center;
+  line-height: 16px;
+  font-weight: 500;
+  padding: 0 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button .AstvBtnIndicators {
+  display: block;
+  position: relative;
+  padding: 0;
+  line-height: 3px;
+  text-align: center;
+  top: -7px;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button .AstvBtnIndicators .AstvBtnIndicator {
+  background-color: #bbb;
+  display: inline-block;
+  width: 13px;
+  height: 3px;
+  border-radius: 2px;
+  margin: 0 1px;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button .AstvBtnIndicators .AstvBtnIndicator.AstvActive {
+  background-color: var(--AstvBodyColor);
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button .AstvBtnIndicators .AstvBtnIndicator.AstvLevelHide {
+  display: none;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button .AstvBtnToggle .AstvBtnLabel {
+  padding-bottom: 0;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button:hover {
+  background-color: #F2F3F7;
+  border-color: #aaa;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button:hover .AstvBtnIcon {
+  background-color: #000;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button:hover .AstvBtnTip {
+  transition-delay: 0.5s;
+  visibility: visible;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button:active {
+  background-color: #D3D5DC;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button:active .AstvBtnIcon {
+  background-color: #111;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button:active .AstvBtnIndicator.AstvActive {
+  background-color: var(--AstvBodyColor);
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvActive {
+  background-color: rgba(var(--AstvBodyColorRgb), 0.1);
+  border: 1px solid black !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvActive .AstvBtnIcon {
+  background-color: var(--AstvBodyColor);
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvActive .AstvBtnLabel {
+  color: var(--AstvBodyColor);
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvActive .AstvBtnIndicators {
+  top: 0px;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvActive .AstvBtnChecked {
+  display: block;
+  transition-delay: 0.5s;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvActive.AstvBtnToggle .AstvBtnLabel {
+  height: 32px;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button:focus-visible {
+  outline: 2px solid var(--AstvBodyColor) !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_textsize .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtnTextSize.3.svg") !important;
+  mask-image: url("IconBtnTextSize.3.svg") !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_align .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtnAlign.2.svg") !important;
+  mask-image: url("IconBtnAlign.2.svg") !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_align.AstvLevel_left .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtnAlign_left.2.svg") !important;
+  mask-image: url("IconBtnAlign_left.2.svg") !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_align.AstvLevel_justify .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtnAlign_justify.2.svg") !important;
+  mask-image: url("IconBtnAlign_justify.2.svg") !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_align.AstvLevel_right .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtnAlign_right.2.svg") !important;
+  mask-image: url("IconBtnAlign_right.2.svg") !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_linespacing .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtn_linespacing.1.svg") !important;
+  mask-image: url("IconBtn_linespacing.1.svg") !important;
+  height: 26px;
+  margin-bottom: 3px;
+  margin-top: 8px;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_charspacing .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtn_charspacing.1.svg") !important;
+  mask-image: url("IconBtn_charspacing.1.svg") !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_focus .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtnFocus.2.svg") !important;
+  mask-image: url("IconBtnFocus.2.svg") !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_smartcontrast .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtnSmartContrast.1.svg") !important;
+  mask-image: url("IconBtnSmartContrast.1.svg") !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_contrast .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtnContrast.6.svg") !important;
+  mask-image: url("IconBtnContrast.6.svg") !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_colors .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtnColors.1.svg") !important;
+  mask-image: url("IconBtnColors.1.svg") !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_saturation .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtnSaturation.3.svg") !important;
+  mask-image: url("IconBtnSaturation.3.svg") !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_voice .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtnVoice.1.svg") !important;
+  mask-image: url("IconBtnVoice.1.svg") !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_animation .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtnAnimation.2.svg") !important;
+  mask-image: url("IconBtnAnimation.2.svg") !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_sound .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtnSound.2.svg") !important;
+  mask-image: url("IconBtnSound.2.svg") !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_image .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtnImage.2.svg") !important;
+  mask-image: url("IconBtnImage.2.svg") !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_pdf .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtnPdf.1.svg") !important;
+  mask-image: url("IconBtnPdf.1.svg") !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_readaloud .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtnRead.3.svg") !important;
+  mask-image: url("IconBtnRead.3.svg") !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_vlibras .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtnVLibras.1.svg") !important;
+  mask-image: url("IconBtnVLibras.1.svg") !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_struct .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtnStruct.2.svg") !important;
+  mask-image: url("IconBtnStruct.2.svg") !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_magnifying .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtnMagnifying.2.svg") !important;
+  mask-image: url("IconBtnMagnifying.2.svg") !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_guide .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtn_guide.1.svg") !important;
+  mask-image: url("IconBtn_guide.1.svg") !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_ruler .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtn_ruler.1.svg") !important;
+  mask-image: url("IconBtn_ruler.1.svg") !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_cursor .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtnCursor.9.svg") !important;
+  mask-image: url("IconBtnCursor.9.svg") !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_font .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtn_font_sansserif.6.svg") !important;
+  mask-image: url("IconBtn_font_sansserif.6.svg") !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_font.AstvLevel_dyslexic .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtn_font_dyslexic.3.svg") !important;
+  mask-image: url("IconBtn_font_dyslexic.3.svg") !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_font.AstvLevel_serif .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtn_font_serif.4.svg") !important;
+  mask-image: url("IconBtn_font_serif.4.svg") !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_tooltips .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtnTooltips.4.svg") !important;
+  mask-image: url("IconBtnTooltips.4.svg") !important;
+}
+.AstvWin .AstvWinMain .AstvButtons .AstvButtonGroup button.AstvBtn_highlight .AstvBtnIcon {
+  -webkit-mask-image: url("IconBtnHighlight.8.svg") !important;
+  mask-image: url("IconBtnHighlight.8.svg") !important;
+}
+
+.AstvWin.AstvSelMain .AstvWinMain {
+  display: block;
+}
+
+[data-astv-vlibras] [vw] [vw-access-button].active {
+  display: flex;
+}
+
+[data-astv-vlibras-off] [vw] [vw-access-button].active {
+  display: none;
+}
+
+[astv-win] [vw] [vw-access-button].active {
+  display: none;
+}
+
+[data-astv-vlibras-visible] .AssistiveFloating {
+  display: none;
+}
+
+.AssistivePlugin {
+  display: block !important;
+  border-left-style: dotted;
+  border-left-color: rgba(255, 255, 255, 0);
+  border-left-width: 1px;
+}
